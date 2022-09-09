@@ -1,2 +1,2 @@
 # coalesce
-Git repository for Coalesce training
+Git repository for Coalesce training!
