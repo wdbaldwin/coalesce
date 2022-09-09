@@ -1,0 +1,62 @@
+steps:
+  SALES_COUNTRY_REGION_CURRENCY-25:
+    operation:
+      database: ""
+      dataset: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 200
+              stepCounter: 25
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: CountryRegionCode
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 201
+              stepCounter: 25
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: CurrencyCode
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 202
+              stepCounter: 25
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: ModifiedDate
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'SALES_COUNTRY_REGION_CURRENCY') }}
+      name: SALES_COUNTRY_REGION_CURRENCY
+      schema: ""
+      sqlType: Source
+      table: SALES_COUNTRY_REGION_CURRENCY
+      type: sourceInput
+    stepCounter: "25"
