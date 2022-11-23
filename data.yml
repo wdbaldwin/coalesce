@@ -1,14 +1,21 @@
-<<<<<<< HEAD
-defaultStorageMapping: SOURCE
-=======
 defaultStorageMapping: TARGET
->>>>>>> parent of 92c871f (Delete data.yml)
 jobs: {}
 locations:
+  PROD:
+    mappingDefinitions:
+      "2":
+        database: COALESCE_TRAINING
+        schema: COALESCE_PROD
   SOURCE:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "2":
+        database: COALESCE_TRAINING
+        schema: COALESCE_SOURCE
   TARGET:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "2":
+        database: COALESCE_TRAINING
+        schema: COALESCE_TARGET
 macros: {}
 packages: {}
 projects: {}
@@ -163,11 +170,7 @@ stepTypes:
             {% endif %}
         run:
           templateString: |
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> parent of 92c871f (Delete data.yml)
             {% set is_type_2 = columns | selectattr("isChangeTracking") | list | length > 0 %}
 
                 {% for test in node.tests if config.testsEnabled %}
@@ -519,7 +522,6 @@ stepTypes:
           attributeName: isSystemUpdateDate
       templates:
         create:
-<<<<<<< HEAD
           templateString: |2-
 
                 {% if node.materializationType == 'table' %}
@@ -682,355 +684,6 @@ stepTypes:
                 {% endif %}
                 
                 
-=======
-          templateString: "
-
-            \    {% if node.materializationType == 'table' %}
-
-            \        {{ stage('Create Fact Table') }}
-
-            \   \ 
-
-            \        CREATE OR REPLACE TABLE {{
-            ref_no_link(node.location.name, node.name) }}
-
-            \        (
-
-            \            {% for col in columns %}
-
-            \                \"{{ col.name }}\" {{ col.dataType }}
-
-            \                {%- if not col.nullable %} NOT NULL
-
-            \                    {%- if col.defaultValue | length >
-            0 %} DEFAULT {{ col.defaultValue }}{% endif %}
-
-            \                {% endif %}
-
-            \                {%- if col.description | length > 0 %}
-            COMMENT '{{ col.description }}'{% endif %}
-
-            \                {%- if not loop.last -%}, {% endif %}
-
-            \            {% endfor %}
-
-            \        )
-
-            \        {%- if node.description | length > 0 %} COMMENT
-            = '{{ node.description }}'{% endif %}
-
-            \   \ 
-
-            \   \ 
-
-            \    {% elif node.materializationType == 'view' %}
-
-            \        {{ stage('Create Fact View') }}
-
-            \   \ 
-
-            \        CREATE OR REPLACE VIEW {{
-            ref_no_link(node.location.name, node.name) }}
-
-            \        (
-
-            \            {% for col in columns %}
-
-            \                \"{{ col.name }}\"
-
-            \                {%- if col.description | length > 0 %}
-            COMMENT '{{ col.description }}'{% endif %}
-
-            \                {%- if not loop.last -%},{% endif %}
-
-            \            {% endfor %}
-
-            \        )
-
-            \        {%- if node.description | length > 0 %} COMMENT
-            = '{{ node.description }}'{% endif %}
-
-            \        AS
-
-            \        {% for source in sources %}
-
-            \   \ 
-
-            \            {% if loop.first %}SELECT {% endif %}
-
-            \   \ 
-
-            \            {% for col in source.columns %}
-
-            \                {{ get_source_transform(col) }} AS \"{{
-            col.name }}\"
-
-            \                {%- if not loop.last -%}, {% endif %}
-
-            \            {% endfor %}
-
-            \            {{ source.join }}
-
-            \   \ 
-
-            \            {% if not loop.last %} UNION ALL {% endif
-            %}
-
-            \        {% endfor %}
-
-            \   \ 
-
-            \    {% endif %}
-
-            \    "
-        run:
-          templateString: "
-
-            \    {% for test in node.tests if config.testsEnabled %}
-
-            \        {% if test.runOrder == 'Before' %}
-
-            \            {{ test_stage(test.name,
-            test.continueOnFailure) }}
-
-            \            {{ test.templateString }}
-
-            \        {% endif %}
-
-            \    {% endfor %}
-
-
-            \    {% if node.materializationType == 'table' %}
-
-            \        {% if config.preSQL %}
-
-            \            {{ stage('Pre-SQL') }}
-
-            \            {{ config.preSQL }}
-
-            \        {% endif %}
-
-            \       \ 
-
-            \        {% set has_business_key = columns |
-            selectattr(\"isBusinessKey\") | list | length > 0 %}
-
-            \       \ 
-
-            \        {% for source in sources %}
-
-            \       \ 
-
-            \            {% if has_business_key %}
-
-            \       \ 
-
-            \                {{ stage('MERGE ' + source.name |
-            string ) }}
-
-            \                MERGE INTO {{
-            ref_no_link(node.location.name, node.name) }} \"TGT\"
-
-            \                USING (
-
-            \                    SELECT
-
-            \                    {% for col in source.columns %}
-
-            \                        {{ get_source_transform(col) }}
-            AS \"{{ col.name }}\"
-
-            \                        {%- if not loop.last %}, {%
-            endif %}
-
-            \                    {% endfor %}
-
-            \                    {{ source.join }})
-
-            \                    AS \"SRC\"
-
-            \                ON
-
-            \                {% for col in source.columns if
-            col.isBusinessKey -%}
-
-            \                    {% if not loop.first %}
-
-            \                        AND
-
-            \                    {% endif %}
-
-            \                    \"SRC\".\"{{ col.name }}\" =
-            \"TGT\".\"{{ col.name }}\"
-
-            \                {% endfor %}
-
-            \                WHEN MATCHED
-
-            \                {% for col in source.columns if not
-            (   col.isBusinessKey or
-
-            \                                                        \
-            col.isSystemUpdateDate or
-
-            \                                                        \
-            col.isSystemCreateDate) %}
-
-            \                    {% if loop.first %}
-
-            \                        AND (
-
-            \                    {% else %}
-
-            \                        OR
-
-            \                    {% endif %}
-
-            \                    NVL( CAST(\"SRC\".\"{{ col.name
-            }}\" as STRING), '**NULL**') <> NVL( CAST(\"TGT\".\"{{ col.name }}\"
-            as STRING), '**NULL**')
-
-            \                    {% if loop.last %}
-
-            \                        )
-
-            \                    {% endif %}
-
-            \                {% endfor %}
-
-            \                THEN UPDATE SET
-
-            \                {%- for col in source.columns if not
-            (col.isBusinessKey or col.isSystemCreateDate) %}
-
-            \                        \"TGT\".\"{{ col.name }}\" =
-            \"SRC\".\"{{ col.name }}\"
-
-            \                    {% if not loop.last %}, {% endif %}
-
-            \                {% endfor %}
-
-            \                WHEN NOT MATCHED THEN
-
-            \                INSERT (
-
-            \                {%- for col in source.columns if not
-            col.isSurrogateKey %}
-
-            \                    \"{{ col.name }}\"
-
-            \                    {% if not loop.last %}, {% endif %}
-
-            \                {% endfor -%}
-
-            \                )
-
-            \                VALUES (
-
-            \                {%- for col in source.columns if not
-            col.isSurrogateKey %}
-
-            \                    \"SRC\".\"{{ col.name }}\"
-
-            \                    {% if not loop.last %}, {% endif %}
-
-            \                {% endfor -%}
-
-            \                )
-
-            \       \ 
-
-            \            {% else %}
-
-            \       \ 
-
-            \                {{ stage('Insert ' + source.name |
-            string ) }}
-
-            \       \ 
-
-            \                    INSERT INTO {{
-            ref_no_link(node.location.name, node.name) }}
-
-            \                    (
-
-            \                        {% for col in source.columns %}
-
-            \                            \"{{ col.name }}\"
-
-            \                            {%- if not loop.last -%},{%
-            endif %}
-
-            \                        {% endfor %}
-
-            \                    )
-
-            \       \ 
-
-            \                    SELECT
-
-            \                    {% for col in source.columns %}
-
-            \                        {{ get_source_transform(col) }}
-            AS \"{{ col.name }}\"
-
-            \                        {%- if not loop.last -%}, {%
-            endif %}
-
-            \                    {% endfor %}
-
-            \                    {{ source.join }}
-
-            \            {% endif %}
-
-            \        {% endfor %}
-
-            \        {% if config.postSQL %}
-
-            \            {{ stage('Post-SQL') }}
-
-            \            {{ config.postSQL }}
-
-            \        {% endif %}
-
-            \    {% endif %}
-
-
-            \    {% if config.testsEnabled %}
-
-            \        {% for test in node.tests %}
-
-            \            {% if test.runOrder == 'After' %}
-
-            \                {{ test_stage(test.name,
-            test.continueOnFailure) }}
-
-            \                {{ test.templateString }}
-
-            \            {% endif %}
-
-            \        {% endfor %}
-
-
-            \        {% for column in columns %}
-
-            \            {% for test in column.tests %}
-
-            \                {{ test_stage(column.name + \": \" +
-            test.name) }}
-
-            \                {{ test.templateString }}
-
-            \            {% endfor %}
-
-            \        {% endfor %}
-
-            \    {% endif %}
-
-            \   \ 
-
-            \    "
->>>>>>> parent of 92c871f (Delete data.yml)
     name: Fact
     version: 1
   StepType-Hub:
@@ -1115,7 +768,6 @@ stepTypes:
             			
             			{% endif %}
         run:
-<<<<<<< HEAD
           templateString: |2-
 
                 {% for test in node.tests if config.testsEnabled %}
@@ -1199,170 +851,6 @@ stepTypes:
             	{% endfor %}
             {% endif %}
             			
-=======
-          templateString: "
-
-            \    {% for test in node.tests if config.testsEnabled %}
-
-            \        {% if test.runOrder == 'Before' %}
-
-            \            {{ test_stage(test.name,
-            test.continueOnFailure) }}
-
-            \            {{ test.templateString }}
-
-            \        {% endif %}
-
-            \    {% endfor %}
-
-
-            {% if node.materializationType == 'table' %}
-
-            \t{% if config.preSQL %}
-
-            \t\t{{ stage('Pre-SQL') }}
-
-            \t\t{{ config.preSQL }}
-
-            \t{% endif %}
-
-
-
-            \t{{ stage('Merge Hub') }}
-
-            \tMERGE INTO {{ ref_no_link(node.location.name,
-            node.name) }} \"TGT\" USING
-
-            \t(
-
-            \t\t{% for source in sources %}
-
-            \t\tSELECT
-
-            \t\t{% for col in source.columns %}
-
-            \            {{ get_source_transform(col) }} AS \"{{
-            col.name }}\"
-
-            \t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t{% endfor %}
-
-
-            \t\t{{ source.join }}
-
-
-            \t\t{% if not loop.last %}
-
-            \t\t\t{{ config.insertStrategy }}
-
-            \t\t{% endif %}
-
-            \t{% endfor %}
-
-            \t)
-
-            \tAS \"SRC\"
-
-            \tON
-
-            \t{% for col in sources[0].columns if
-            (col.sourceColumns[0]\ 
-
-            \                                        and
-            col.sourceColumns[0].column\ 
-
-            \                                        and
-            col.sourceColumns[0].column.isHubHash
-
-            \                                        ) -%}
-
-            \t\t{% if not loop.first %}
-
-            \t\t\tAND
-
-            \t\t{% endif %}
-
-            \t\t\"SRC\".\"{{ col.name }}\" = \"TGT\".\"{{ col.name
-            }}\"
-
-            \t{% endfor %}
-
-            \tWHEN NOT MATCHED THEN
-
-            \tINSERT
-
-            \t(
-
-            \t\t{% for col in columns %}
-
-            \t\t\t\"{{ col.name }}\"
-
-            \t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t{% endfor %}
-
-            \t) VALUES
-
-            \t(
-
-            \t\t{% for col in columns %}
-
-            \t\t\t\"SRC\".\"{{ col.name }}\"
-
-            \t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t{% endfor %}
-
-            \t)
-
-
-
-            \t{% if config.postSQL %}
-
-            \t\t{{ stage('Post-SQL') }}
-
-            \t\t{{ config.postSQL }}
-
-            \t{% endif %}
-
-            \t
-
-            {% endif %}
-
-
-            {% if config.testsEnabled %}
-
-            \t{% for test in node.tests %}
-
-            \t\t{% if test.runOrder == 'After' %}
-
-            \t\t\t{{ test_stage(test.name, test.continueOnFailure)
-            }}
-
-            \t\t\t{{ test.templateString }}
-
-            \        {% endif %}
-
-            \t{% endfor %}
-
-
-            \t{% for column in columns %}
-
-            \t\t{% for test in column.tests %}
-
-            \t\t\t{{ test_stage(column.name + \": \" + test.name) }}
-
-            \t\t\t{{ test.templateString }}
-
-            \t\t{% endfor %}
-
-            \t{% endfor %}
-
-            {% endif %}
-
-            \t\t\t"
->>>>>>> parent of 92c871f (Delete data.yml)
     name: Hub
     version: 1
   StepType-Link:
@@ -1446,7 +934,6 @@ stepTypes:
             			
             			{% endif %}
         run:
-<<<<<<< HEAD
           templateString: |2-
 
                 {% for test in node.tests if config.testsEnabled %}
@@ -1529,170 +1016,6 @@ stepTypes:
             	{% endfor %}
             {% endif %}
             			
-=======
-          templateString: "
-
-            \    {% for test in node.tests if config.testsEnabled %}
-
-            \        {% if test.runOrder == 'Before' %}
-
-            \            {{ test_stage(test.name,
-            test.continueOnFailure) }}
-
-            \            {{ test.templateString }}
-
-            \        {% endif %}
-
-            \    {% endfor %}
-
-
-            {% if node.materializationType == 'table' %}
-
-            \t{% if config.preSQL %}
-
-            \t\t{{ stage('Pre-SQL') }}
-
-            \t\t{{ config.preSQL }}
-
-            \t
-
-            \t{% endif %}
-
-
-            \t\t\t
-
-            \t{{ stage('Merge Link') }}
-
-            \tMERGE INTO {{ ref_no_link(node.location.name,
-            node.name) }} \"TGT\" USING
-
-            \t(
-
-            \t\t{% for source in sources %}
-
-            \t\tSELECT
-
-            \t\t{% for col in source.columns %}
-
-            \            {{ get_source_transform(col) }} AS \"{{
-            col.name }}\"
-
-            \t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t{% endfor %}
-
-
-            \t\t{{ source.join }}
-
-
-            \t\t{% if not loop.last %}
-
-            \t\t\t{{ config.insertStrategy }}
-
-            \t\t{% endif %}
-
-            \t{% endfor %}
-
-            \t)
-
-            \tAS \"SRC\"
-
-            \tON
-
-            \t{% for col in sources[0].columns if
-            (col.sourceColumns[0]\ 
-
-            \                                        and
-            col.sourceColumns[0].column\ 
-
-            \                                        and
-            col.sourceColumns[0].column.isLinkHash
-
-            \                                        ) -%}
-
-            \t\t{% if not loop.first %}
-
-            \t\t\tAND
-
-            \t\t{% endif %}
-
-            \t\t\"SRC\".\"{{ col.name }}\" = \"TGT\".\"{{ col.name
-            }}\"
-
-            \t{% endfor %}
-
-            \tWHEN NOT MATCHED THEN
-
-            \tINSERT
-
-            \t(
-
-            \t\t{% for col in columns %}
-
-            \t\t\t\"{{ col.name }}\"
-
-            \t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t{% endfor %}
-
-            \t) VALUES
-
-            \t(
-
-            \t\t{% for col in columns %}
-
-            \t\t\t\"SRC\".\"{{ col.name }}\"
-
-            \t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t{% endfor %}
-
-            \t)
-
-
-            \t{% if config.postSQL %}
-
-            \t\t{{ stage('Post-SQL') }}
-
-            \t\t{{ config.postSQL }}\t
-
-            \t{% endif %}
-
-            {% endif %}
-
-
-            {% if config.testsEnabled %}
-
-            \t{% for test in node.tests %}
-
-            \t\t{% if test.runOrder == 'After' %}
-
-            \t\t\t{{ test_stage(test.name, test.continueOnFailure)
-            }}
-
-            \t\t\t{{ test.templateString }}
-
-            \        {% endif %}
-
-            \t{% endfor %}
-
-
-            \t{% for column in columns %}
-
-            \t\t{% for test in column.tests %}
-
-            \t\t\t{{ test_stage(column.name + \": \" + test.name) }}
-
-            \t\t\t{{ test.templateString }}
-
-            \t\t{% endfor %}
-
-            \t{% endfor %}
-
-            {% endif %}
-
-            \t\t\t"
->>>>>>> parent of 92c871f (Delete data.yml)
     name: Link
     version: 1
   StepType-Satellite:
@@ -1776,7 +1099,6 @@ stepTypes:
             			
             			{% endif %}
         run:
-<<<<<<< HEAD
           templateString: |2-
 
                 {% for test in node.tests if config.testsEnabled %}
@@ -1858,172 +1180,6 @@ stepTypes:
             	{% endfor %}
             {% endif %}
             			
-=======
-          templateString: "
-
-            \    {% for test in node.tests if config.testsEnabled %}
-
-            \        {% if test.runOrder == 'Before' %}
-
-            \            {{ test_stage(test.name,
-            test.continueOnFailure) }}
-
-            \            {{ test.templateString }}
-
-            \        {% endif %}
-
-            \    {% endfor %}
-
-
-            {% if node.materializationType == 'table' %}
-
-            \t\t{% if config.preSQL %}
-
-            \t\t\t{{ stage('Pre-SQL') }}
-
-            \t\t\t{{ config.preSQL }}
-
-            \t\t{% endif %}
-
-            \t
-
-            \t\t{{ stage('Merge Satellite') }}
-
-            \t\tMERGE INTO {{ ref_no_link(node.location.name,
-            node.name) }} \"TGT\" USING
-
-            \t\t(
-
-            \t\t\t{% for source in sources %}
-
-            \t\t\tSELECT
-
-            \t\t\t{% for col in source.columns %}
-
-            \                {{ get_source_transform(col) }} AS \"{{
-            col.name }}\"
-
-            \t\t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t\t{% endfor %}
-
-            \t
-
-            \t\t\t{{ source.join }}
-
-            \t
-
-            \t\t\t{% if not loop.last %}
-
-            \t\t\t\t{{ config.insertStrategy }}
-
-            \t\t\t{% endif %}
-
-            \t\t{% endfor %}
-
-            \t\t)
-
-            \t\tAS \"SRC\"
-
-            \t\tON
-
-            \t\t{% for col in sources[0].columns if
-            (col.sourceColumns[0]\ 
-
-            \                                            and
-            col.sourceColumns[0].column\ 
-
-            \                                            and
-            col.sourceColumns[0].column.isChangeHash
-
-            \                                            ) -%}
-
-            \t\t\t{% if not loop.first %}
-
-            \t\t\t\tAND
-
-            \t\t\t{% endif %}
-
-            \t\t\t\"SRC\".\"{{ col.name }}\" = \"TGT\".\"{{ col.name
-            }}\"
-
-            \t\t{% endfor %}
-
-            \t\tWHEN NOT MATCHED THEN
-
-            \t\tINSERT
-
-            \t\t(
-
-            \t\t\t{% for col in columns %}
-
-            \t\t\t\t\"{{ col.name }}\"
-
-            \t\t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t\t{% endfor %}
-
-            \t\t) VALUES
-
-            \t\t(
-
-            \t\t\t{% for col in columns %}
-
-            \t\t\t\t\"SRC\".\"{{ col.name }}\"
-
-            \t\t\t\t{%- if not loop.last -%}, {% endif %}
-
-            \t\t\t{% endfor %}
-
-            \t\t)
-
-            \t
-
-            \t{% if config.postSQL %}
-
-            \t\t{{ stage('Post-SQL') }}
-
-            \t\t{{ config.postSQL }}\t
-
-            \t{% endif %}
-
-            \t
-
-            {% endif %}
-
-
-            {% if config.testsEnabled %}
-
-            \t{% for test in node.tests %}
-
-            \t\t{% if test.runOrder == 'After' %}
-
-            \t\t\t{{ test_stage(test.name, test.continueOnFailure)
-            }}
-
-            \t\t\t{{ test.templateString }}
-
-            \        {% endif %}
-
-            \t{% endfor %}
-
-
-            \t{% for column in columns %}
-
-            \t\t{% for test in column.tests %}
-
-            \t\t\t{{ test_stage(column.name + \": \" + test.name) }}
-
-            \t\t\t{{ test.templateString }}
-
-            \t\t{% endfor %}
-
-            \t{% endfor %}
-
-            {% endif %}
-
-            \t\t\t"
->>>>>>> parent of 92c871f (Delete data.yml)
     name: Satellite
     version: 1
   StepType-Source:
@@ -2166,11 +1322,7 @@ stepTypes:
             {% endif %}
         run:
           templateString: |2
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> parent of 92c871f (Delete data.yml)
                 {% for test in node.tests if config.testsEnabled %}
                     {% if test.runOrder == 'Before' %}
                         {{ test_stage(test.name, test.continueOnFailure) }}
@@ -2259,11 +1411,7 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-<<<<<<< HEAD
     isDisabled: true
-=======
-    isDisabled: false
->>>>>>> parent of 92c871f (Delete data.yml)
     metadata:
       defaultStorageLocation: null
       error: null
@@ -2487,11 +1635,7 @@ stepTypes:
             {% endif %}
         run:
           templateString: |-
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> parent of 92c871f (Delete data.yml)
             {% set has_business_key = columns | selectattr("isBusinessKey") | list | length > 0 %}
             {% set is_type_2 = columns | selectattr("isChangeTracking") | list | length > 0 %}
 
