@@ -1,5 +1,5 @@
 steps:
-  CUSTOMER_COMPANY_ABC-563:
+  SALES_ORDER_DETAIL-611:
     operation:
       database: ""
       dataset: ""
@@ -13,133 +13,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11467
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: CUSTOMER_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11468
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: PERSON_TYPE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11469
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: NAME_STYLE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11470
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: TITLE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11471
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: FIRST_NAME
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11472
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: FULL_NAME
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11473
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: SUFFIX
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11474
-              stepCounter: 563
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: PHONE_NUMBER
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11475
-              stepCounter: 563
+              columnCounter: 12313
+              stepCounter: 611
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: EMAIL_PROMOTION
+            name: SALES_ORDER_ID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -148,13 +28,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11476
-              stepCounter: 563
+              columnCounter: 12314
+              stepCounter: 611
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: ADDITIONAL_CONTACT_INFO
+            name: SALES_ORDER_DETAIL_ID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -163,21 +43,111 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11477
-              stepCounter: 563
+              columnCounter: 12315
+              stepCounter: 611
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: DEMOGRAPHICS
+            name: CARRIER_TRACKING_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12316
+              stepCounter: 611
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ORDER_QTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12317
+              stepCounter: 611
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12318
+              stepCounter: 611
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SPECIAL_OFFER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12319
+              stepCounter: 611
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: UNIT_PRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12320
+              stepCounter: 611
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LINE_TOTAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12321
+              stepCounter: 611
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: MODIFIED_DATE
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SOURCE', 'CUSTOMER_COMPANY_ABC') }}
-      name: CUSTOMER_COMPANY_ABC
+          joinCondition: FROM {{ ref('SOURCE', 'SALES_ORDER_DETAIL') }}
+      name: SALES_ORDER_DETAIL
       schema: ""
       sqlType: Source
-      table: CUSTOMER_COMPANY_ABC
+      table: SALES_ORDER_DETAIL
       type: sourceInput
-    stepCounter: "563"
+    stepCounter: "611"

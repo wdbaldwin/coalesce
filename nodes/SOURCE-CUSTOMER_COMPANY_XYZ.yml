@@ -1,5 +1,5 @@
 steps:
-  CUSTOMER_COMPANY_ABC-563:
+  CUSTOMER_COMPANY_XYZ-564:
     operation:
       database: ""
       dataset: ""
@@ -13,8 +13,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11467
-              stepCounter: 563
+              columnCounter: 11478
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -28,8 +28,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11468
-              stepCounter: 563
+              columnCounter: 11479
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -43,8 +43,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11469
-              stepCounter: 563
+              columnCounter: 11480
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -58,8 +58,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11470
-              stepCounter: 563
+              columnCounter: 11481
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -73,8 +73,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11471
-              stepCounter: 563
+              columnCounter: 11482
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -88,8 +88,23 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11472
-              stepCounter: 563
+              columnCounter: 11483
+              stepCounter: 564
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: MIDDLE_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11484
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -103,8 +118,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11473
-              stepCounter: 563
+              columnCounter: 11485
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -118,8 +133,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11474
-              stepCounter: 563
+              columnCounter: 11486
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -133,8 +148,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11475
-              stepCounter: 563
+              columnCounter: 11487
+              stepCounter: 564
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -148,8 +163,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11476
-              stepCounter: 563
+              columnCounter: 11488
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -163,8 +178,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11477
-              stepCounter: 563
+              columnCounter: 11489
+              stepCounter: 564
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -174,10 +189,10 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SOURCE', 'CUSTOMER_COMPANY_ABC') }}
-      name: CUSTOMER_COMPANY_ABC
+          joinCondition: FROM {{ ref('SOURCE', 'CUSTOMER_COMPANY_XYZ') }}
+      name: CUSTOMER_COMPANY_XYZ
       schema: ""
       sqlType: Source
-      table: CUSTOMER_COMPANY_ABC
+      table: CUSTOMER_COMPANY_XYZ
       type: sourceInput
-    stepCounter: "563"
+    stepCounter: "564"

@@ -1,0 +1,302 @@
+steps:
+  DIM_SHIP_DATE-647:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12794
+              stepCounter: "647"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_SHIP_DATE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12775
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12795
+              stepCounter: "647"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_CALENDAR_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12776
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12796
+              stepCounter: "647"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12777
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12797
+              stepCounter: "647"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12778
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12798
+              stepCounter: "647"
+            dataType: CHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_MONTH_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12779
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12799
+              stepCounter: "647"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_DAY_OF_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12780
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12800
+              stepCounter: "647"
+            dataType: VARCHAR(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_DAY_OF_WEEK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12781
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12801
+              stepCounter: "647"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_WEEK_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12782
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12802
+              stepCounter: "647"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_DAY_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12783
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12803
+              stepCounter: "647"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_QUARTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12784
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12804
+              stepCounter: "647"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_WEEK_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12785
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12805
+              stepCounter: "647"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_MONTH_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12786
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12806
+              stepCounter: "647"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_QUARTER_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12787
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12807
+              stepCounter: "647"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12788
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12808
+              stepCounter: "647"
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12789
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12809
+              stepCounter: "647"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12790
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12810
+              stepCounter: "647"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12791
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12811
+              stepCounter: "647"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12792
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12812
+              stepCounter: "647"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12793
+                    stepCounter: "646"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_DATE
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'DIM_DATE') }} "DIM_DATE"
+            name: DIM_SHIP_DATE
+            noLinkRefs: []
+      name: DIM_SHIP_DATE
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "647"

@@ -1,0 +1,318 @@
+steps:
+  PRODUCTION_PRODUCT-600:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12103
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12104
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12105
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12106
+              stepCounter: 600
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: MAKE_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12107
+              stepCounter: 600
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: FINISHED_GOODS_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12108
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: COLOR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12109
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SAFETY_STOCK_LEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12110
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: REORDER_POINT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12111
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: STANDARD_COST
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12112
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LIST_PRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12113
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: SIZE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12114
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: SIZE_UNIT_MEASURE_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12115
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: WEIGHT_UNIT_MEASURE_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12116
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DAYS_TO_MANUFACTURE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12117
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_LINE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12118
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: CLASS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12119
+              stepCounter: 600
+            config: {}
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            defaultValue: ""
+            description: ""
+            name: STYLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12120
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_SUBCATEGORY_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12121
+              stepCounter: 600
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT_MODEL_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12267
+              stepCounter: "600"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WEIGHT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'PRODUCTION_PRODUCT') }}
+      name: PRODUCTION_PRODUCT
+      schema: ""
+      sqlType: Source
+      table: PRODUCTION_PRODUCT
+      type: sourceInput
+    stepCounter: "600"

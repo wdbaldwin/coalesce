@@ -1,0 +1,332 @@
+steps:
+  DIM_DATE-646:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12775
+              stepCounter: "646"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSurrogateKey: true
+            name: DIM_DATE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 12776
+              stepCounter: "646"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: CALENDAR_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12744
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12777
+              stepCounter: "646"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12745
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12778
+              stepCounter: "646"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12746
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12779
+              stepCounter: "646"
+            dataType: CHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MONTH_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12747
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12780
+              stepCounter: "646"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAY_OF_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12748
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12781
+              stepCounter: "646"
+            dataType: VARCHAR(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAY_OF_WEEK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12749
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12782
+              stepCounter: "646"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: WEEK_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12750
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12783
+              stepCounter: "646"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAY_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12751
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12784
+              stepCounter: "646"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: QUARTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12752
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12785
+              stepCounter: "646"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: WEEK_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12753
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12786
+              stepCounter: "646"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MONTH_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12754
+                    stepCounter: "644"
+                transform: ""
+          - columnReference:
+              columnCounter: 12787
+              stepCounter: "646"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: QUARTER_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12755
+                    stepCounter: "644"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12788
+              stepCounter: "646"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12789
+              stepCounter: "646"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12790
+              stepCounter: "646"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12791
+              stepCounter: "646"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12792
+              stepCounter: "646"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12793
+              stepCounter: "646"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_DATE
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'STG_DATE') }} "STG_DATE"
+            name: DIM_DATE
+            noLinkRefs: []
+      name: DIM_DATE
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: "646"

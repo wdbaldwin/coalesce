@@ -1,0 +1,151 @@
+steps:
+  STG_SALES_TERRITORY1-652:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12975
+              stepCounter: "652"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11000
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12976
+              stepCounter: "652"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY_REGION_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11001
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12977
+              stepCounter: "652"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11002
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12978
+              stepCounter: "652"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11003
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12979
+              stepCounter: "652"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2019_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11004
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12980
+              stepCounter: "652"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2020_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11005
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12981
+              stepCounter: "652"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2021_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11006
+                    stepCounter: "534"
+                transform: ""
+          - columnReference:
+              columnCounter: 12982
+              stepCounter: "652"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2022_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11007
+                    stepCounter: "534"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_SALES_TERRITORY
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'STG_SALES_TERRITORY') }} "STG_SALES_TERRITORY"
+            name: STG_SALES_TERRITORY1
+            noLinkRefs: []
+      name: STG_SALES_TERRITORY1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "652"

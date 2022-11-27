@@ -1,0 +1,290 @@
+steps:
+  RV_DIM_CUST-578:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 11697
+              stepCounter: "578"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11659
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11698
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11660
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11699
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NAME_STYLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11661
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11700
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11662
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11701
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11663
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11702
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MIDDLE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11664
+                    stepCounter: "576"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11717
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11716
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11704
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUFFIX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11666
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11705
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PHONE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11667
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11706
+              stepCounter: "578"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EMAIL_PROMOTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11668
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11707
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADDITIONAL_CONTACT_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11669
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11708
+              stepCounter: "578"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEMOGRAPHICS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11670
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11709
+              stepCounter: "578"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11671
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11710
+              stepCounter: "578"
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11672
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11711
+              stepCounter: "578"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11673
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11712
+              stepCounter: "578"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11674
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11713
+              stepCounter: "578"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11675
+                    stepCounter: "576"
+                transform: ""
+          - columnReference:
+              columnCounter: 11714
+              stepCounter: "578"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11676
+                    stepCounter: "576"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_CUST
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'DIM_CUST') }} "DIM_CUST"
+            name: RV_DIM_CUST
+            noLinkRefs: []
+      name: RV_DIM_CUST
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "578"

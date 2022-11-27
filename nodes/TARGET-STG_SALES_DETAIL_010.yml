@@ -1,0 +1,188 @@
+steps:
+  STG_SALES_DETAIL_010-614:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12344
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SALES_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12313
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12345
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SALES_ORDER_DETAIL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12314
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12346
+              stepCounter: "614"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CARRIER_TRACKING_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12315
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12347
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_QTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12316
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12348
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12317
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12349
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SPECIAL_OFFER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12318
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12350
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UNIT_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12319
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12351
+              stepCounter: "614"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LINE_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12320
+                    stepCounter: "611"
+                transform: ""
+          - columnReference:
+              columnCounter: 12352
+              stepCounter: "614"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12321
+                    stepCounter: "611"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12353
+              stepCounter: "614"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ORDER_LINE_ITEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: |-
+                  ROW_NUMBER() OVER (PARTITION BY "SALES_ORDER_ID" ORDER BY 
+                  "SALES_ORDER_DETAIL_ID" ASC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: SALES_ORDER_DETAIL
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'SALES_ORDER_DETAIL') }} "SALES_ORDER_DETAIL"
+            name: STG_SALES_DETAIL_010
+            noLinkRefs: []
+      name: STG_SALES_DETAIL_010
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "614"

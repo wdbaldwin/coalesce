@@ -1,0 +1,333 @@
+steps:
+  STG_SALES_HEADER_020-656:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: truncate "COALESCE_TRAINING"."COALESCE_TARGET"."STG_SALES_HEADER_010"
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 13078
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: ACCOUNT_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12904
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13079
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: BILL_TO_ADDRESS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12905
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13080
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: CREDIT_CARD_APPROVAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12906
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13081
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: CREDIT_CARD_ID_ORIG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12907
+                    stepCounter: "651"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13099
+              stepCounter: "656"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CREDIT_CARD_ID_salted
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: CAST ("CREDIT_CARD_ID" AS VARCHAR) ||'SALTING'
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13100
+              stepCounter: "656"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 13099
+                stepCounter: "656"
+            name: CREDIT_CARD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 13082
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: CURRENCY_RATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12908
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13083
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12909
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13084
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: DUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12910
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13085
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: FREIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12911
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13086
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: ONLINE_ORDER_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12912
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13087
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12913
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13088
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: REVISION_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12914
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13089
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: SALES_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12915
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13090
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: SALES_ORDER_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12916
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13091
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12917
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13092
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: SHIP_METHOD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12918
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13093
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: SHIP_TO_ADDRESS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12919
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13094
+              stepCounter: "656"
+            dataType: STRING
+            description: ""
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12920
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13095
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: SUB_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12921
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13096
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: TAX_AMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12922
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13097
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: TOTAL_DUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12923
+                    stepCounter: "651"
+                transform: ""
+          - columnReference:
+              columnCounter: 13098
+              stepCounter: "656"
+            dataType: NUMBER
+            description: ""
+            name: TERRITORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12924
+                    stepCounter: "651"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_SALES_HEADER_010
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'STG_SALES_HEADER_010') }} "STG_SALES_HEADER_010"
+            name: STG_SALES_HEADER_020
+            noLinkRefs: []
+      name: STG_SALES_HEADER_020
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "656"

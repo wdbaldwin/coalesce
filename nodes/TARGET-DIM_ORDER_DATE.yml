@@ -1,0 +1,302 @@
+steps:
+  DIM_ORDER_DATE-648:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12813
+              stepCounter: "648"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_ORDER_DATE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12775
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12814
+              stepCounter: "648"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_CALENDAR_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12776
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12815
+              stepCounter: "648"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12777
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12816
+              stepCounter: "648"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12778
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12817
+              stepCounter: "648"
+            dataType: CHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_MONTH_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12779
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12818
+              stepCounter: "648"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DAY_OF_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12780
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12819
+              stepCounter: "648"
+            dataType: VARCHAR(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DAY_OF_WEEK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12781
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12820
+              stepCounter: "648"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_WEEK_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12782
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12821
+              stepCounter: "648"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DAY_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12783
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12822
+              stepCounter: "648"
+            dataType: SMALLINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_QUARTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12784
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12823
+              stepCounter: "648"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_WEEK_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12785
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12824
+              stepCounter: "648"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_MONTH_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12786
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12825
+              stepCounter: "648"
+            dataType: INT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_QUARTER_LAST_DAY_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12787
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12826
+              stepCounter: "648"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12788
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12827
+              stepCounter: "648"
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12789
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12828
+              stepCounter: "648"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12790
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12829
+              stepCounter: "648"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12791
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12830
+              stepCounter: "648"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12792
+                    stepCounter: "646"
+                transform: ""
+          - columnReference:
+              columnCounter: 12831
+              stepCounter: "648"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12793
+                    stepCounter: "646"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_DATE
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'DIM_DATE') }} "DIM_DATE"
+            name: DIM_ORDER_DATE
+            noLinkRefs: []
+      name: DIM_ORDER_DATE
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "648"

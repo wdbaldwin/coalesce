@@ -1,0 +1,33 @@
+steps:
+  SALES_ORDER_HEADER-612:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12322
+              stepCounter: 612
+            config: {}
+            dataType: VARIANT
+            defaultValue: ""
+            description: ""
+            name: Contruct data
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'SALES_ORDER_HEADER') }}
+      name: SALES_ORDER_HEADER
+      schema: ""
+      sqlType: Source
+      table: SALES_ORDER_HEADER
+      type: sourceInput
+    stepCounter: "612"

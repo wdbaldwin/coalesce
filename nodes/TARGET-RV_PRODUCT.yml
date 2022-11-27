@@ -1,0 +1,442 @@
+steps:
+  RV_PRODUCT-608:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12237
+              stepCounter: "608"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_PRODUCT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12207
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12238
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12208
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12239
+              stepCounter: "608"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_CATEGORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12209
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12241
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12211
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12242
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12212
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12243
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12213
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12244
+              stepCounter: "608"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MAKE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12214
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12245
+              stepCounter: "608"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FINISHED_GOODS_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12215
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12246
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COLOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12216
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12247
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SAFETY_STOCK_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12217
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12248
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REORDER_POINT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12218
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12249
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STANDARD_COST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12219
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12250
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LIST_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12220
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12251
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12221
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12252
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SIZE_UNIT_MEASURE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12222
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12253
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: WEIGHT_UNIT_MEASURE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12223
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12254
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAYS_TO_MANUFACTURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12224
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12255
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_LINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12225
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12256
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CLASS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12226
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12257
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STYLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12227
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12258
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_MODEL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12228
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12259
+              stepCounter: "608"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUBCATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12229
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12260
+              stepCounter: "608"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUBCATEGORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12230
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12261
+              stepCounter: "608"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12231
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12262
+              stepCounter: "608"
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12232
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12263
+              stepCounter: "608"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12233
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12264
+              stepCounter: "608"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12234
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12265
+              stepCounter: "608"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12235
+                    stepCounter: "607"
+                transform: ""
+          - columnReference:
+              columnCounter: 12266
+              stepCounter: "608"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12236
+                    stepCounter: "607"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_PRODUCT
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'DIM_PRODUCT') }} "DIM_PRODUCT"
+            name: RV_PRODUCT
+            noLinkRefs: []
+      name: RV_PRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "608"

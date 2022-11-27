@@ -1,0 +1,360 @@
+steps:
+  STG_PRODUCT-605:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12150
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12125
+                    stepCounter: "602"
+                transform: ""
+          - columnReference:
+              columnCounter: 12151
+              stepCounter: "605"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_CATEGORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12126
+                    stepCounter: "602"
+                transform: ""
+          - columnReference:
+              columnCounter: 12153
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12128
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12154
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12129
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12155
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12130
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12156
+              stepCounter: "605"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MAKE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12131
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12157
+              stepCounter: "605"
+            dataType: BOOLEAN
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FINISHED_GOODS_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12132
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12158
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COLOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12133
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12159
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SAFETY_STOCK_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12134
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12160
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REORDER_POINT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12135
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12161
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STANDARD_COST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12136
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12162
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LIST_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12137
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12163
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12138
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12164
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SIZE_UNIT_MEASURE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12139
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12165
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: WEIGHT_UNIT_MEASURE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12140
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12166
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DAYS_TO_MANUFACTURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12141
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12167
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_LINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12142
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12168
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CLASS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12143
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12169
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STYLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12144
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12171
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_MODEL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12146
+                    stepCounter: "603"
+                transform: ""
+          - columnReference:
+              columnCounter: 12172
+              stepCounter: "605"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUBCATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12147
+                    stepCounter: "604"
+                transform: ""
+          - columnReference:
+              columnCounter: 12174
+              stepCounter: "605"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUBCATEGORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12149
+                    stepCounter: "604"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_PRODUCTION_CATEGORY: "602"
+              STG_PRODUCTION_PRODUCT: "603"
+              STG_PRODUCTION_SUBCATEGORY: "604"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_PRODUCTION_CATEGORY
+              - locationName: TARGET
+                nodeName: STG_PRODUCTION_PRODUCT
+              - locationName: TARGET
+                nodeName: STG_PRODUCTION_SUBCATEGORY
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'STG_PRODUCTION_CATEGORY') }} "STG_PRODUCTION_CATEGORY"
+                INNER JOIN {{ ref('TARGET', 'STG_PRODUCTION_SUBCATEGORY') }} "STG_PRODUCTION_SUBCATEGORY"
+                ON "STG_PRODUCTION_CATEGORY"."PRODUCT_CATEGORY_ID" = "STG_PRODUCTION_SUBCATEGORY"."PRODUCT_CATEGORY_ID"
+                INNER JOIN {{ ref('TARGET', 'STG_PRODUCTION_PRODUCT') }} "STG_PRODUCTION_PRODUCT"
+                ON "STG_PRODUCTION_PRODUCT"."PRODUCT_SUBCATEGORY_ID" = "STG_PRODUCTION_SUBCATEGORY"."PRODUCT_SUBCATEGORY_ID"
+            name: STG_PRODUCT
+            noLinkRefs: []
+      name: STG_PRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "605"

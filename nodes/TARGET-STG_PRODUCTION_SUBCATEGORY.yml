@@ -1,0 +1,81 @@
+steps:
+  STG_PRODUCTION_SUBCATEGORY-604:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 12147
+              stepCounter: "604"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUBCATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12122
+                    stepCounter: "601"
+                transform: ""
+          - columnReference:
+              columnCounter: 12148
+              stepCounter: "604"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12123
+                    stepCounter: "601"
+                transform: ""
+          - columnReference:
+              columnCounter: 12149
+              stepCounter: "604"
+            dataType: VARCHAR(8192) COLLATE 'en_us'
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_SUBCATEGORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12124
+                    stepCounter: "601"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: PRODUCTION_SUBCATEGORY
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'PRODUCTION_SUBCATEGORY') }} "PRODUCTION_SUBCATEGORY"
+            name: STG_PRODUCTION_SUBCATEGORY
+            noLinkRefs: []
+      name: STG_PRODUCTION_SUBCATEGORY
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "604"

@@ -1,0 +1,207 @@
+steps:
+  STG_CUSTOMER_COMPANY_XYZ-567:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 11513
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11478
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11514
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PERSON_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11479
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11515
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NAME_STYLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11480
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11516
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11481
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11517
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11482
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11518
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MIDDLE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11483
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11519
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FULL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11484
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11520
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUFFIX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11485
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11521
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PHONE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11486
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11522
+              stepCounter: "567"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EMAIL_PROMOTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11487
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11523
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADDITIONAL_CONTACT_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11488
+                    stepCounter: "564"
+                transform: ""
+          - columnReference:
+              columnCounter: 11524
+              stepCounter: "567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEMOGRAPHICS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11489
+                    stepCounter: "564"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: CUSTOMER_COMPANY_XYZ
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'CUSTOMER_COMPANY_XYZ') }} "CUSTOMER_COMPANY_XYZ"
+            name: STG_CUSTOMER_COMPANY_XYZ
+            noLinkRefs: []
+      name: STG_CUSTOMER_COMPANY_XYZ
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "567"
