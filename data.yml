@@ -1,5 +1,12 @@
 defaultStorageMapping: TARGET
-jobs: {}
+jobs:
+  Job-2:
+    excludeSelector: ""
+    id: 2
+    includeSelector: "{ subgraph: \"TERRITORY\" }"
+    name: New Job
+    steps: []
+    subgraphs: []
 locations:
   PROD:
     mappingDefinitions:
