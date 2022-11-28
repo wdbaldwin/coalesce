@@ -1,9 +1,9 @@
 defaultStorageMapping: TARGET
 jobs:
-  Job-2:
+  Job-3:
     excludeSelector: ""
-    id: 2
-    includeSelector: "{ subgraph: \"TERRITORY\" }"
+    id: 3
+    includeSelector: CUST
     name: New Job
     steps: []
     subgraphs: []
@@ -23,6 +23,9 @@ locations:
       "2":
         database: COALESCE_TRAINING
         schema: COALESCE_TARGET
+      "3":
+        database: COALESCE_TRAINING
+        schema: COALESCE_PROD
 macros: {}
 packages: {}
 projects: {}
