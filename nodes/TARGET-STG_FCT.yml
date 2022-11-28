@@ -24,7 +24,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 12891
+              columnCounter: 13369
               stepCounter: "650"
             config: {}
             dataType: NUMBER
@@ -38,8 +38,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11658
-                    stepCounter: "576"
+                  - columnCounter: 13340
+                    stepCounter: "669"
                 transform: ""
             systemColumnType: None
             type: Column
@@ -128,10 +128,10 @@ steps:
             systemColumnType: None
             type: Column
           - columnReference:
-              columnCounter: 13165
+              columnCounter: 13370
               stepCounter: "650"
             config: {}
-            dataType: VARCHAR
+            dataType: VARCHAR(96)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -141,8 +141,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11659
-                    stepCounter: "576"
+                  - columnCounter: 13341
+                    stepCounter: "669"
                 transform: ""
             systemColumnType: None
             type: Column
@@ -711,14 +711,14 @@ steps:
               DIM_CUST: "576"
               DIM_ORDER_DATE: "648"
               DIM_PRODUCT: "607"
-              DIM_SALES_TERRITORY: "535"
               DIM_SHIP_DATE: "647"
+              DIM_TERRITORY: "535"
               STG_SALES_DETAIL_HEADER_030: "657"
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: TARGET
-                nodeName: DIM_SALES_TERRITORY
+                nodeName: DIM_TERRITORY
               - locationName: TARGET
                 nodeName: DIM_CUST
               - locationName: TARGET
@@ -736,8 +736,8 @@ steps:
                 ON "STG_SALES_DETAIL_HEADER_030"."CUSTOMER_ID" = "DIM_CUST"."CUSTOMER_ID"
                 LEFT JOIN {{ ref('TARGET', 'DIM_PRODUCT') }} "DIM_PRODUCT"
                 ON "STG_SALES_DETAIL_HEADER_030"."PRODUCT_ID" = "DIM_PRODUCT"."PRODUCT_ID"
-                LEFT JOIN  {{ ref('TARGET', 'DIM_SALES_TERRITORY') }} "DIM_SALES_TERRITORY"
-                ON "STG_SALES_DETAIL_HEADER_030"."TERRITORY_ID" = "DIM_SALES_TERRITORY"."TERRITORY_ID"
+                LEFT JOIN  {{ ref('TARGET', 'DIM_TERRITORY') }} "DIM_TERRITORY"
+                ON "STG_SALES_DETAIL_HEADER_030"."TERRITORY_ID" = "DIM_TERRITORY"."TERRITORY_ID"
                 INNER JOIN {{ ref('TARGET', 'DIM_SHIP_DATE') }} "DIM_SHIP_DATE"
                 ON "STG_SALES_DETAIL_HEADER_030"."SHIP_DATE"= "DIM_SHIP_DATE"."SHIP_CALENDAR_DATE"
                 INNER JOIN {{ ref('TARGET', 'DIM_ORDER_DATE') }} "DIM_ORDER_DATE"

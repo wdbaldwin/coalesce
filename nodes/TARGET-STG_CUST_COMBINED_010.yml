@@ -1,5 +1,5 @@
 steps:
-  STG_CUSTOMER_COMPANY_ABC-664:
+  STG_CUST_COMBINED_010-666:
     operation:
       config:
         insertStrategy: INSERT
@@ -12,7 +12,7 @@ steps:
       deployEnabled: true
       description: ""
       isDataVault: false
-      isMultisource: false
+      isMultisource: true
       locationID: ""
       locationName: TARGET
       materializationType: table
@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 13284
-              stepCounter: "664"
+              columnCounter: 13305
+              stepCounter: "666"
             dataType: VARCHAR(96)
             description: ""
             hashColumns: []
@@ -30,12 +30,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13263
-                    stepCounter: "662"
+                  - columnCounter: 13284
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13295
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13285
-              stepCounter: "664"
+              columnCounter: 13306
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -44,12 +48,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13264
-                    stepCounter: "662"
+                  - columnCounter: 13285
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13296
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13286
-              stepCounter: "664"
+              columnCounter: 13307
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -58,12 +66,14 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13265
-                    stepCounter: "662"
+                  - columnCounter: 13286
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 13287
-              stepCounter: "664"
+              columnCounter: 13308
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -72,12 +82,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13266
-                    stepCounter: "662"
+                  - columnCounter: 13287
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13297
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13288
-              stepCounter: "664"
+              columnCounter: 13309
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -86,12 +100,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13267
-                    stepCounter: "662"
+                  - columnCounter: 13288
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13298
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13289
-              stepCounter: "664"
+              columnCounter: 13310
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -100,12 +118,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13268
-                    stepCounter: "662"
+                  - columnCounter: 13289
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13299
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13290
-              stepCounter: "664"
+              columnCounter: 13311
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -114,12 +136,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13269
-                    stepCounter: "662"
+                  - columnCounter: 13290
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13300
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13291
-              stepCounter: "664"
+              columnCounter: 13312
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -128,12 +154,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13270
-                    stepCounter: "662"
+                  - columnCounter: 13291
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13301
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13292
-              stepCounter: "664"
+              columnCounter: 13313
+              stepCounter: "666"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -142,12 +172,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13271
-                    stepCounter: "662"
+                  - columnCounter: 13292
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13302
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13293
-              stepCounter: "664"
+              columnCounter: 13314
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -156,12 +190,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13272
-                    stepCounter: "662"
+                  - columnCounter: 13293
+                    stepCounter: "664"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 13303
+                    stepCounter: "665"
                 transform: ""
           - columnReference:
-              columnCounter: 13294
-              stepCounter: "664"
+              columnCounter: 13315
+              stepCounter: "666"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -170,24 +208,42 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 13273
-                    stepCounter: "662"
+                  - columnCounter: 13294
+                    stepCounter: "664"
                 transform: ""
-        cteString: ""
+              - columnReferences:
+                  - columnCounter: 13304
+                    stepCounter: "665"
+                transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_CUSTOMER_COMPANY_ABC: "664"
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SOURCE
-                nodeName: CUSTOMER_COMPANY_ABC
+              - locationName: TARGET
+                nodeName: STG_CUSTOMER_COMPANY_ABC
             join:
-              joinCondition: FROM {{ ref('SOURCE', 'CUSTOMER_COMPANY_ABC') }} "CUSTOMER_COMPANY_ABC"
-            name: STG_CUSTOMER_COMPANY_ABC
+              joinCondition: FROM {{ ref('TARGET', 'STG_CUSTOMER_COMPANY_ABC') }} "STG_CUSTOMER_COMPANY_ABC"
+            name: ABC
             noLinkRefs: []
-      name: STG_CUSTOMER_COMPANY_ABC
+          - aliases:
+              STG_CUSTOMER_COMPANY_XYZ: "665"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_CUSTOMER_COMPANY_ABC
+              - locationName: TARGET
+                nodeName: STG_CUSTOMER_COMPANY_XYZ
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'STG_CUSTOMER_COMPANY_XYZ') }} "STG_CUSTOMER_COMPANY_XYZ"
+            name: XYZ
+            noLinkRefs: []
+      name: STG_CUST_COMBINED_010
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "664"
+    stepCounter: "666"

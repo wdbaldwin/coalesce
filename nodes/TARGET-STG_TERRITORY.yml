@@ -1,9 +1,14 @@
 steps:
-  STG_SALES_TERRITORY1-652:
+  STG_TERRITORY-534:
     operation:
       config:
         insertStrategy: INSERT
-        postSQL: ""
+        postSQL: |-
+          select * from "COALESCE_TRAINING"."COALESCE_SOURCE"."SALES_TERRITORY"
+          UNPIVOT 
+          ( 
+          "Quota" FOR "Year" IN ("2019_QUOTA" ,"2020_QUOTA" ,"2021_QUOTA" ,"2022_QUOTA") 
+          ) AS unpvt
         preSQL: ""
         testsEnabled: true
         truncateBefore: true
@@ -20,8 +25,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 12975
-              stepCounter: "652"
+              columnCounter: 11000
+              stepCounter: "534"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -30,12 +35,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11000
-                    stepCounter: "534"
+                  - columnCounter: 10984
+                    stepCounter: "532"
                 transform: ""
           - columnReference:
-              columnCounter: 12976
-              stepCounter: "652"
+              columnCounter: 11001
+              stepCounter: "534"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -44,12 +49,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11001
-                    stepCounter: "534"
-                transform: ""
+                  - columnCounter: 10985
+                    stepCounter: "532"
+                transform: UPPER("SALES_TERRITORY"."COUNTY_REGION_CODE")
           - columnReference:
-              columnCounter: 12977
-              stepCounter: "652"
+              columnCounter: 11002
+              stepCounter: "534"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -58,12 +63,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11002
-                    stepCounter: "534"
+                  - columnCounter: 10986
+                    stepCounter: "532"
                 transform: ""
           - columnReference:
-              columnCounter: 12978
-              stepCounter: "652"
+              columnCounter: 11003
+              stepCounter: "534"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -72,12 +77,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11003
-                    stepCounter: "534"
+                  - columnCounter: 10987
+                    stepCounter: "532"
                 transform: ""
           - columnReference:
-              columnCounter: 12979
-              stepCounter: "652"
+              columnCounter: 11004
+              stepCounter: "534"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -86,12 +91,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11004
-                    stepCounter: "534"
+                  - columnCounter: 10988
+                    stepCounter: "532"
                 transform: ""
           - columnReference:
-              columnCounter: 12980
-              stepCounter: "652"
+              columnCounter: 11005
+              stepCounter: "534"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -100,12 +105,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11005
-                    stepCounter: "534"
+                  - columnCounter: 10989
+                    stepCounter: "532"
                 transform: ""
           - columnReference:
-              columnCounter: 12981
-              stepCounter: "652"
+              columnCounter: 11006
+              stepCounter: "534"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -114,12 +119,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11006
-                    stepCounter: "534"
+                  - columnCounter: 10990
+                    stepCounter: "532"
                 transform: ""
           - columnReference:
-              columnCounter: 12982
-              stepCounter: "652"
+              columnCounter: 11007
+              stepCounter: "534"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -128,8 +133,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11007
-                    stepCounter: "534"
+                  - columnCounter: 10991
+                    stepCounter: "532"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -137,15 +142,15 @@ steps:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: TARGET
-                nodeName: STG_SALES_TERRITORY
+              - locationName: SOURCE
+                nodeName: SALES_TERRITORY
             join:
-              joinCondition: FROM {{ ref('TARGET', 'STG_SALES_TERRITORY') }} "STG_SALES_TERRITORY"
-            name: STG_SALES_TERRITORY1
+              joinCondition: FROM {{ ref('SOURCE', 'SALES_TERRITORY') }} "SALES_TERRITORY"
+            name: STG_TERRITORY
             noLinkRefs: []
-      name: STG_SALES_TERRITORY1
+      name: STG_TERRITORY
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "652"
+    stepCounter: "534"

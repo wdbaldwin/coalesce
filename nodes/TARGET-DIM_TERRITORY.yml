@@ -1,5 +1,5 @@
 steps:
-  DIM_SALES_TERRITORY-535:
+  DIM_TERRITORY-535:
     operation:
       config:
         postSQL: ""
@@ -259,16 +259,18 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_TERRITORY: "534"
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: TARGET
-                nodeName: STG_SALES_TERRITORY
+                nodeName: STG_TERRITORY
             join:
-              joinCondition: FROM {{ ref('TARGET', 'STG_SALES_TERRITORY') }} "STG_SALES_TERRITORY"
-            name: DIM_SALES_TERRITORY
+              joinCondition: FROM {{ ref('TARGET', 'STG_TERRITORY') }} "STG_TERRITORY"
+            name: DIM_TERRITORY
             noLinkRefs: []
-      name: DIM_SALES_TERRITORY
+      name: DIM_TERRITORY
       overrideSQL: false
       schema: ""
       sqlType: Dimension

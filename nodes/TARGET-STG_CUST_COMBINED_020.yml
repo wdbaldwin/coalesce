@@ -1,5 +1,5 @@
 steps:
-  STG_CUST_CMPNY_020-575:
+  STG_CUST_COMBINED_020-667:
     operation:
       config:
         insertStrategy: INSERT
@@ -20,9 +20,9 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 11646
-              stepCounter: "575"
-            dataType: STRING
+              columnCounter: 13316
+              stepCounter: "667"
+            dataType: VARCHAR(96)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -30,54 +30,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11644
-                    stepCounter: "571"
+                  - columnCounter: 13305
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11647
-              stepCounter: "575"
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: PERSON_TYPE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11576
-                    stepCounter: "571"
-                transform: ""
-          - columnReference:
-              columnCounter: 11648
-              stepCounter: "575"
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: NAME_STYLE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11577
-                    stepCounter: "571"
-                transform: ""
-          - columnReference:
-              columnCounter: 11649
-              stepCounter: "575"
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: TITLE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11578
-                    stepCounter: "571"
-                transform: ""
-          - columnReference:
-              columnCounter: 11650
-              stepCounter: "575"
+              columnCounter: 13317
+              stepCounter: "667"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -86,12 +44,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11579
-                    stepCounter: "571"
+                  - columnCounter: 13306
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11651
-              stepCounter: "575"
+              columnCounter: 13318
+              stepCounter: "667"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -100,42 +58,26 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11580
-                    stepCounter: "571"
-                transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11715
-              stepCounter: "575"
-            dataType: VARCHAR(16777216)
-            description: ""
-            name: LAST_NAME
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11581
-                    stepCounter: "571"
+                  - columnCounter: 13307
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11653
-              stepCounter: "575"
+              columnCounter: 13319
+              stepCounter: "667"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SUFFIX
+            name: FULL_NAME
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11582
-                    stepCounter: "571"
+                  - columnCounter: 13308
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11654
-              stepCounter: "575"
+              columnCounter: 13320
+              stepCounter: "667"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -144,50 +86,92 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11583
-                    stepCounter: "571"
+                  - columnCounter: 13309
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11655
-              stepCounter: "575"
+              columnCounter: 13321
+              stepCounter: "667"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESS_LINE_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13310
+                    stepCounter: "666"
+                transform: IFF(LENGTH("ADDRESS_LINE_1")>35,RIGHT("ADDRESS_LINE_1",35),"ADDRESS_LINE_1")
+          - columnReference:
+              columnCounter: 13322
+              stepCounter: "667"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADDRESS_LINE_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13311
+                    stepCounter: "666"
+                transform: ""
+          - columnReference:
+              columnCounter: 13323
+              stepCounter: "667"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13312
+                    stepCounter: "666"
+                transform: ""
+          - columnReference:
+              columnCounter: 13324
+              stepCounter: "667"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: EMAIL_PROMOTION
+            name: STATE_PROVINCE_ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11584
-                    stepCounter: "571"
+                  - columnCounter: 13313
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11656
-              stepCounter: "575"
+              columnCounter: 13325
+              stepCounter: "667"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ADDITIONAL_CONTACT_INFO
+            name: POSTAL_CODE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11585
-                    stepCounter: "571"
+                  - columnCounter: 13314
+                    stepCounter: "666"
                 transform: ""
           - columnReference:
-              columnCounter: 11657
-              stepCounter: "575"
+              columnCounter: 13326
+              stepCounter: "667"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DEMOGRAPHICS
+            name: SPATIAL_LOCATION
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11586
-                    stepCounter: "571"
+                  - columnCounter: 13315
+                    stepCounter: "666"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -196,14 +180,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: TARGET
-                nodeName: STG_CUST_CMPNY_010
+                nodeName: STG_CUST_COMBINED_010
             join:
-              joinCondition: FROM {{ ref('TARGET', 'STG_CUST_CMPNY_010') }} "STG_CUST_CMPNY_010"
-            name: STG_CUST_CMPNY_020
+              joinCondition: FROM {{ ref('TARGET', 'STG_CUST_COMBINED_010') }} "STG_CUST_COMBINED_010"
+            name: STG_CUST_COMBINED_020
             noLinkRefs: []
-      name: STG_CUST_CMPNY_020
+      name: STG_CUST_COMBINED_020
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "575"
+    stepCounter: "667"

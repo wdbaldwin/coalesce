@@ -1,5 +1,5 @@
 steps:
-  CUSTOMER_COMPANY_XYZ-564:
+  CUSTOMER_COMPANY_XYZ-663:
     operation:
       database: ""
       dataset: ""
@@ -13,10 +13,10 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11478
-              stepCounter: 564
+              columnCounter: 13274
+              stepCounter: 663
             config: {}
-            dataType: VARCHAR(16777216)
+            dataType: VARCHAR(96)
             defaultValue: ""
             description: ""
             name: CUSTOMER_ID
@@ -28,53 +28,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11479
-              stepCounter: 564
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: PERSON_TYPE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11480
-              stepCounter: 564
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: NAME_STYLE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11481
-              stepCounter: 564
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: TITLE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11482
-              stepCounter: 564
+              columnCounter: 13275
+              stepCounter: 663
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -88,23 +43,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11483
-              stepCounter: 564
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: MIDDLE_NAME
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11484
-              stepCounter: 564
+              columnCounter: 13276
+              stepCounter: 663
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -118,23 +58,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11485
-              stepCounter: 564
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: SUFFIX
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 11486
-              stepCounter: 564
+              columnCounter: 13277
+              stepCounter: 663
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -148,13 +73,58 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11487
-              stepCounter: 564
+              columnCounter: 13278
+              stepCounter: 663
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: ADDRESS_LINE_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13279
+              stepCounter: 663
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: ADDRESS_LINE_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13280
+              stepCounter: 663
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13281
+              stepCounter: 663
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: EMAIL_PROMOTION
+            name: STATE_PROVINCE_ID
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -163,13 +133,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11488
-              stepCounter: 564
+              columnCounter: 13282
+              stepCounter: 663
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: ADDITIONAL_CONTACT_INFO
+            name: POSTAL_CODE
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -178,13 +148,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11489
-              stepCounter: 564
+              columnCounter: 13283
+              stepCounter: 663
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: DEMOGRAPHICS
+            name: SPATIAL_LOCATION
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -195,4 +165,4 @@ steps:
       sqlType: Source
       table: CUSTOMER_COMPANY_XYZ
       type: sourceInput
-    stepCounter: "564"
+    stepCounter: "663"
