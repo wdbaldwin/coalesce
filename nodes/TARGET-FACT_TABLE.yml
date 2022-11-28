@@ -574,13 +574,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_FACT: "650"
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: TARGET
-                nodeName: STG_FCT
+                nodeName: STG_FACT
             join:
-              joinCondition: FROM {{ ref('TARGET', 'STG_FCT') }} "STG_FCT"
+              joinCondition: FROM {{ ref('TARGET', 'STG_FACT') }} "STG_FACT"
             name: FACT_TABLE
             noLinkRefs: []
       name: FACT_TABLE

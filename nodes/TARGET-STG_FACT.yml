@@ -1,5 +1,5 @@
 steps:
-  STG_FCT-650:
+  STG_FACT-650:
     operation:
       config:
         insertStrategy: INSERT
@@ -742,9 +742,9 @@ steps:
                 ON "STG_SALES_DETAIL_HEADER_030"."SHIP_DATE"= "DIM_SHIP_DATE"."SHIP_CALENDAR_DATE"
                 INNER JOIN {{ ref('TARGET', 'DIM_ORDER_DATE') }} "DIM_ORDER_DATE"
                 ON "STG_SALES_DETAIL_HEADER_030"."ORDER_DATE" = "DIM_ORDER_DATE"."ORDER_CALENDAR_DATE"
-            name: STG_FCT
+            name: STG_FACT
             noLinkRefs: []
-      name: STG_FCT
+      name: STG_FACT
       overrideSQL: false
       schema: ""
       sqlType: Stage
