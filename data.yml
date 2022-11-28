@@ -1,21 +1,20 @@
 defaultStorageMapping: TARGET
-jobs:
-  Job-3:
-    excludeSelector: ""
-    id: 3
-    includeSelector: CUST
-    name: New Job
-    steps: []
-    subgraphs: []
+jobs: {}
 locations:
   PROD:
     mappingDefinitions:
       "2":
         database: COALESCE_TRAINING
         schema: COALESCE_PROD
+      "3":
+        database: COALESCE_TRAINING
+        schema: COALESCE_PROD
   SOURCE:
     mappingDefinitions:
       "2":
+        database: COALESCE_TRAINING
+        schema: COALESCE_SOURCE
+      "3":
         database: COALESCE_TRAINING
         schema: COALESCE_SOURCE
   TARGET:
