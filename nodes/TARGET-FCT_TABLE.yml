@@ -1,5 +1,5 @@
 steps:
-  FCT_Sales-671:
+  FCT_TABLE-671:
     operation:
       config:
         postSQL: ""
@@ -581,9 +581,9 @@ steps:
                 nodeName: STG_FCT
             join:
               joinCondition: FROM {{ ref('TARGET', 'STG_FCT') }} "STG_FCT"
-            name: FCT_Sales
+            name: FCT_TABLE
             noLinkRefs: []
-      name: FCT_Sales
+      name: FCT_TABLE
       overrideSQL: false
       schema: ""
       sqlType: Fact
