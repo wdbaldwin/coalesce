@@ -1,0 +1,246 @@
+steps:
+  RV_TERRITORY-672:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 13410
+              stepCounter: "672"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_SALES_TERRITORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11008
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13411
+              stepCounter: "672"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11009
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13412
+              stepCounter: "672"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTY_REGION_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11010
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13413
+              stepCounter: "672"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11011
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13414
+              stepCounter: "672"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11012
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13415
+              stepCounter: "672"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2019_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11013
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13416
+              stepCounter: "672"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2020_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11014
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13417
+              stepCounter: "672"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2021_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11015
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13418
+              stepCounter: "672"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: 2022_QUOTA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11016
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13419
+              stepCounter: "672"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11017
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13420
+              stepCounter: "672"
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11018
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13421
+              stepCounter: "672"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11019
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13422
+              stepCounter: "672"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11020
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13423
+              stepCounter: "672"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11021
+                    stepCounter: "535"
+                transform: ""
+          - columnReference:
+              columnCounter: 13424
+              stepCounter: "672"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11022
+                    stepCounter: "535"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_TERRITORY
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'DIM_TERRITORY') }} "DIM_TERRITORY"
+            name: RV_TERRITORY
+            noLinkRefs: []
+      name: RV_TERRITORY
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "672"
