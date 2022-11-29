@@ -102,7 +102,7 @@ steps:
               - columnReferences:
                   - columnCounter: 13310
                     stepCounter: "666"
-                transform: IFF(LENGTH("ADDRESS_LINE_1")>35,RIGHT("ADDRESS_LINE_1",35),"ADDRESS_LINE_1")
+                transform: IFF(LENGTH("ADDRESS_LINE_1")>35,LEFT("ADDRESS_LINE_1",35),"ADDRESS_LINE_1")
           - columnReference:
               columnCounter: 13322
               stepCounter: "667"
@@ -176,13 +176,17 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_CUST_COMBINED_010: "666"
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: TARGET
                 nodeName: STG_CUST_COMBINED_010
             join:
-              joinCondition: FROM {{ ref('TARGET', 'STG_CUST_COMBINED_010') }} "STG_CUST_COMBINED_010"
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'STG_CUST_COMBINED_010') }} "STG_CUST_COMBINED_010"
+                WHERE LEN("STG_CUST_COMBINED_010"."ADDRESS_LINE_1") > 35
             name: STG_CUST_COMBINED_020
             noLinkRefs: []
       name: STG_CUST_COMBINED_020

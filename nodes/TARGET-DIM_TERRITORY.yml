@@ -1,5 +1,5 @@
 steps:
-  DIM_TERRITORY-535:
+  DIM_TERRITORY-689:
     operation:
       config:
         postSQL: ""
@@ -22,22 +22,22 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11008
-              stepCounter: "535"
+              columnCounter: 13601
+              stepCounter: "689"
             config: {}
             dataType: NUMBER
             defaultValue: ""
             description: ""
             hashColumns: []
             isSurrogateKey: true
-            name: DIM_SALES_TERRITORY_KEY
+            name: DIM_TERRITORY_KEY
             nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 11009
-              stepCounter: "535"
+              columnCounter: 13602
+              stepCounter: "689"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -47,12 +47,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11000
-                    stepCounter: "534"
+                  - columnCounter: 13593
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11010
-              stepCounter: "535"
+              columnCounter: 13603
+              stepCounter: "689"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -61,12 +61,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11001
-                    stepCounter: "534"
+                  - columnCounter: 13594
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11011
-              stepCounter: "535"
+              columnCounter: 13604
+              stepCounter: "689"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -75,12 +75,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11002
-                    stepCounter: "534"
+                  - columnCounter: 13595
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11012
-              stepCounter: "535"
+              columnCounter: 13605
+              stepCounter: "689"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -89,72 +89,72 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11003
-                    stepCounter: "534"
+                  - columnCounter: 13596
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11013
-              stepCounter: "535"
-            dataType: NUMBER
+              columnCounter: 13606
+              stepCounter: "689"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2019_QUOTA
+            name: QUOTA2019
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11004
-                    stepCounter: "534"
+                  - columnCounter: 13597
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11014
-              stepCounter: "535"
-            dataType: NUMBER
+              columnCounter: 13607
+              stepCounter: "689"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2020_QUOTA
+            name: QUOTA2020
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11005
-                    stepCounter: "534"
+                  - columnCounter: 13598
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11015
-              stepCounter: "535"
-            dataType: NUMBER
+              columnCounter: 13608
+              stepCounter: "689"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2021_QUOTA
+            name: QUOTA2021
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11006
-                    stepCounter: "534"
+                  - columnCounter: 13599
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 11016
-              stepCounter: "535"
-            dataType: NUMBER
+              columnCounter: 13609
+              stepCounter: "689"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2022_QUOTA
+            name: QUOTA2022
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11007
-                    stepCounter: "534"
+                  - columnCounter: 13600
+                    stepCounter: "688"
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11017
-              stepCounter: "535"
+              columnCounter: 13610
+              stepCounter: "689"
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -171,8 +171,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11018
-              stepCounter: "535"
+              columnCounter: 13611
+              stepCounter: "689"
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -189,8 +189,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11019
-              stepCounter: "535"
+              columnCounter: 13612
+              stepCounter: "689"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -207,8 +207,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11020
-              stepCounter: "535"
+              columnCounter: 13613
+              stepCounter: "689"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -225,8 +225,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11021
-              stepCounter: "535"
+              columnCounter: 13614
+              stepCounter: "689"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -243,8 +243,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11022
-              stepCounter: "535"
+              columnCounter: 13615
+              stepCounter: "689"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -260,7 +260,7 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              STG_TERRITORY: "534"
+              STG_TERRITORY: "688"
             customSQL:
               customSQL: ""
             dependencies:
@@ -275,4 +275,4 @@ steps:
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: "535"
+    stepCounter: "689"

@@ -67,27 +67,39 @@ steps:
                   - columnCounter: 12907
                     stepCounter: "651"
                 transform: ""
+          - columnReference:
+              columnCounter: 13505
+              stepCounter: "656"
+            dataType: VARCHAR
+            description: ""
+            name: CREDIT_CARD_ID_HASH_MANUAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12907
+                    stepCounter: "651"
+                transform: SHA1("STG_SALES_HEADER_010"."CREDIT_CARD_ID")
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 13099
+              columnCounter: 13504
               stepCounter: "656"
             config: {}
-            dataType: VARCHAR
+            dataType: STRING
             defaultValue: ""
             description: ""
-            keyColumnType: None
-            name: CREDIT_CARD_ID_salted
+            hashDetails:
+              hashAlgorithm: SHA256
+            hashedColumns:
+              - columnCounter: 13081
+                stepCounter: "656"
+            name: CREDIT_CARD_ID_HASH_AUTO
             nullable: true
             sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0
-                    stepCounter: "0"
-                transform: CAST ("CREDIT_CARD_ID" AS VARCHAR) ||'SALTING'
-            systemColumnType: None
-            transform: ""
+              - columnReferences: []
+                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -101,9 +113,7 @@ steps:
             description: ""
             hashDetails:
               hashAlgorithm: SHA1
-            hashedColumns:
-              - columnCounter: 13099
-                stepCounter: "656"
+            hashedColumns: []
             name: CREDIT_CARD_ID
             nullable: true
             sourceColumnReferences:
@@ -316,7 +326,9 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_SALES_HEADER_010: "651"
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: TARGET

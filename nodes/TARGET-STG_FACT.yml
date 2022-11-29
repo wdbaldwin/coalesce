@@ -72,7 +72,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 12897
+              columnCounter: 13616
               stepCounter: "650"
             config: {}
             dataType: NUMBER
@@ -82,12 +82,12 @@ steps:
             hashDetails: null
             isSurrogateKey: true
             keyColumnType: None
-            name: DIM_SALES_TERRITORY_KEY
+            name: DIM_TERRITORY_KEY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11008
-                    stepCounter: "535"
+                  - columnCounter: 13601
+                    stepCounter: "689"
                 transform: ""
             systemColumnType: None
             type: Column
@@ -708,7 +708,7 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              DIM_CUST: "576"
+              DIM_CUST: "669"
               DIM_ORDER_DATE: "648"
               DIM_PRODUCT: "607"
               DIM_SHIP_DATE: "647"
@@ -720,8 +720,6 @@ steps:
               - locationName: TARGET
                 nodeName: DIM_TERRITORY
               - locationName: TARGET
-                nodeName: DIM_CUST
-              - locationName: TARGET
                 nodeName: DIM_PRODUCT
               - locationName: TARGET
                 nodeName: DIM_SHIP_DATE
@@ -729,6 +727,8 @@ steps:
                 nodeName: DIM_ORDER_DATE
               - locationName: TARGET
                 nodeName: STG_SALES_DETAIL_HEADER_030
+              - locationName: TARGET
+                nodeName: DIM_CUST
             join:
               joinCondition: |-
                 FROM {{ ref('TARGET', 'STG_SALES_DETAIL_HEADER_030') }} "STG_SALES_DETAIL_HEADER_030"

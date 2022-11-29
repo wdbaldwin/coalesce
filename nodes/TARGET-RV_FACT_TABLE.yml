@@ -565,7 +565,9 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              FACT_TABLE: "671"
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: TARGET

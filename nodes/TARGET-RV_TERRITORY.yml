@@ -1,9 +1,12 @@
 steps:
-  RV_TERRITORY-672:
+  RV_TERRITORY-691:
     operation:
       config:
-        insertStrategy: UNION
-        selectDistinct: false
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
       database: ""
       dependencies: []
       deployEnabled: true
@@ -17,22 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 13410
-              stepCounter: "672"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: DIM_SALES_TERRITORY_KEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11008
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13411
-              stepCounter: "672"
+              columnCounter: 13625
+              stepCounter: "691"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -41,12 +30,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11009
-                    stepCounter: "535"
+                  - columnCounter: 13593
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13412
-              stepCounter: "672"
+              columnCounter: 13626
+              stepCounter: "691"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -55,12 +44,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11010
-                    stepCounter: "535"
+                  - columnCounter: 13594
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13413
-              stepCounter: "672"
+              columnCounter: 13627
+              stepCounter: "691"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -69,12 +58,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11011
-                    stepCounter: "535"
+                  - columnCounter: 13595
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13414
-              stepCounter: "672"
+              columnCounter: 13628
+              stepCounter: "691"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -83,164 +72,89 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11012
-                    stepCounter: "535"
+                  - columnCounter: 13596
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13415
-              stepCounter: "672"
-            dataType: NUMBER
+              columnCounter: 13629
+              stepCounter: "691"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2019_QUOTA
+            name: QUOTA2019
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11013
-                    stepCounter: "535"
+                  - columnCounter: 13597
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13416
-              stepCounter: "672"
-            dataType: NUMBER
+              columnCounter: 13630
+              stepCounter: "691"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2020_QUOTA
+            name: QUOTA2020
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11014
-                    stepCounter: "535"
+                  - columnCounter: 13598
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13417
-              stepCounter: "672"
-            dataType: NUMBER
+              columnCounter: 13631
+              stepCounter: "691"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2021_QUOTA
+            name: QUOTA2021
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11015
-                    stepCounter: "535"
+                  - columnCounter: 13599
+                    stepCounter: "688"
                 transform: ""
           - columnReference:
-              columnCounter: 13418
-              stepCounter: "672"
-            dataType: NUMBER
+              columnCounter: 13632
+              stepCounter: "691"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2022_QUOTA
+            name: QUOTA2022
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 11016
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13419
-              stepCounter: "672"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SYSTEM_VERSION
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11017
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13420
-              stepCounter: "672"
-            dataType: VARCHAR
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SYSTEM_CURRENT_FLAG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11018
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13421
-              stepCounter: "672"
-            dataType: TIMESTAMP
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SYSTEM_START_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11019
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13422
-              stepCounter: "672"
-            dataType: TIMESTAMP
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SYSTEM_END_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11020
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13423
-              stepCounter: "672"
-            dataType: TIMESTAMP
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SYSTEM_CREATE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11021
-                    stepCounter: "535"
-                transform: ""
-          - columnReference:
-              columnCounter: 13424
-              stepCounter: "672"
-            dataType: TIMESTAMP
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SYSTEM_UPDATE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11022
-                    stepCounter: "535"
+                  - columnCounter: 13600
+                    stepCounter: "688"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
-              customSQL: ""
+              customSQL: |-
+                {{ stage('Override Create SQL') }} CREATE
+                OR REPLACE VIEW {{ ref('TARGET', 'RV_TERRITORY') }} AS (
+                  SELECT
+                    *
+                  FROM
+                    {{ ref('TARGET', 'STG_TERRITORY') }} unpivot(
+                      quota for year in (QUOTA2019, QUOTA2020, QUOTA2021, QUOTA2022)
+                    )
+                )
             dependencies:
               - locationName: TARGET
-                nodeName: DIM_TERRITORY
+                nodeName: STG_TERRITORY
             join:
-              joinCondition: FROM {{ ref('TARGET', 'DIM_TERRITORY') }} "DIM_TERRITORY"
+              joinCondition: FROM {{ ref('TARGET', 'STG_TERRITORY') }} "STG_TERRITORY"
             name: RV_TERRITORY
             noLinkRefs: []
       name: RV_TERRITORY
-      overrideSQL: false
+      overrideSQL: true
       schema: ""
-      sqlType: View
+      sqlType: Stage
       type: sql
-    stepCounter: "672"
+    stepCounter: "691"

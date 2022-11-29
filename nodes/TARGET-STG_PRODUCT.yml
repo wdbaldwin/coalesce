@@ -327,6 +327,27 @@ steps:
                   - columnCounter: 12149
                     stepCounter: "604"
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13717
+              stepCounter: "605"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ASDF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: COUNT(*) OVER ()
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -349,7 +370,7 @@ steps:
                 INNER JOIN {{ ref('TARGET', 'STG_PRODUCTION_SUBCATEGORY') }} "STG_PRODUCTION_SUBCATEGORY"
                 ON "STG_PRODUCTION_CATEGORY"."PRODUCT_CATEGORY_ID" = "STG_PRODUCTION_SUBCATEGORY"."PRODUCT_CATEGORY_ID"
                 INNER JOIN {{ ref('TARGET', 'STG_PRODUCTION_PRODUCT') }} "STG_PRODUCTION_PRODUCT"
-                ON "STG_PRODUCTION_PRODUCT"."PRODUCT_SUBCATEGORY_ID" = "STG_PRODUCTION_SUBCATEGORY"."PRODUCT_SUBCATEGORY_ID"
+                ON  "STG_PRODUCTION_SUBCATEGORY"."PRODUCT_SUBCATEGORY_ID" = "STG_PRODUCTION_PRODUCT"."PRODUCT_SUBCATEGORY_ID"
             name: STG_PRODUCT
             noLinkRefs: []
       name: STG_PRODUCT

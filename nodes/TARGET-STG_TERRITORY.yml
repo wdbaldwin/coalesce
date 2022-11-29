@@ -1,14 +1,9 @@
 steps:
-  STG_TERRITORY-534:
+  STG_TERRITORY-688:
     operation:
       config:
         insertStrategy: INSERT
-        postSQL: |-
-          select * from "COALESCE_TRAINING"."COALESCE_SOURCE"."SALES_TERRITORY"
-          UNPIVOT 
-          ( 
-          "Quota" FOR "Year" IN ("2019_QUOTA" ,"2020_QUOTA" ,"2021_QUOTA" ,"2022_QUOTA") 
-          ) AS unpvt
+        postSQL: ""
         preSQL: ""
         testsEnabled: true
         truncateBefore: true
@@ -25,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 11000
-              stepCounter: "534"
+              columnCounter: 13593
+              stepCounter: "688"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -35,12 +30,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10984
-                    stepCounter: "532"
+                  - columnCounter: 13585
+                    stepCounter: "687"
                 transform: ""
           - columnReference:
-              columnCounter: 11001
-              stepCounter: "534"
+              columnCounter: 13594
+              stepCounter: "688"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -49,12 +44,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10985
-                    stepCounter: "532"
+                  - columnCounter: 13586
+                    stepCounter: "687"
                 transform: UPPER("SALES_TERRITORY"."COUNTY_REGION_CODE")
           - columnReference:
-              columnCounter: 11002
-              stepCounter: "534"
+              columnCounter: 13595
+              stepCounter: "688"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -63,12 +58,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10986
-                    stepCounter: "532"
+                  - columnCounter: 13587
+                    stepCounter: "687"
                 transform: ""
           - columnReference:
-              columnCounter: 11003
-              stepCounter: "534"
+              columnCounter: 13596
+              stepCounter: "688"
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -77,64 +72,64 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10987
-                    stepCounter: "532"
+                  - columnCounter: 13588
+                    stepCounter: "687"
                 transform: ""
           - columnReference:
-              columnCounter: 11004
-              stepCounter: "534"
-            dataType: NUMBER
+              columnCounter: 13597
+              stepCounter: "688"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2019_QUOTA
+            name: QUOTA2019
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10988
-                    stepCounter: "532"
+                  - columnCounter: 13589
+                    stepCounter: "687"
                 transform: ""
           - columnReference:
-              columnCounter: 11005
-              stepCounter: "534"
-            dataType: NUMBER
+              columnCounter: 13598
+              stepCounter: "688"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2020_QUOTA
+            name: QUOTA2020
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10989
-                    stepCounter: "532"
+                  - columnCounter: 13590
+                    stepCounter: "687"
                 transform: ""
           - columnReference:
-              columnCounter: 11006
-              stepCounter: "534"
-            dataType: NUMBER
+              columnCounter: 13599
+              stepCounter: "688"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2021_QUOTA
+            name: QUOTA2021
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10990
-                    stepCounter: "532"
+                  - columnCounter: 13591
+                    stepCounter: "687"
                 transform: ""
           - columnReference:
-              columnCounter: 11007
-              stepCounter: "534"
-            dataType: NUMBER
+              columnCounter: 13600
+              stepCounter: "688"
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: 2022_QUOTA
+            name: QUOTA2022
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 10991
-                    stepCounter: "532"
+                  - columnCounter: 13592
+                    stepCounter: "687"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -153,4 +148,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "534"
+    stepCounter: "688"

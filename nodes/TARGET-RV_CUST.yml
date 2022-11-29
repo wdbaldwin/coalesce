@@ -173,8 +173,26 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
-              customSQL: ""
+          - aliases:
+              STG_CUST_COMBINED_020: "667"
+            customSQL:
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('TARGET', 'RV_CUST')}} AS (
+                		SELECT 
+                 CUSTOMER_ID AS CUSTOMER_ID,
+                 FIRST_NAME AS FIRST_NAME,
+                 MIDDLE_NAME AS MIDDLE_NAME,
+                 FULL_NAME AS FULL_NAME,
+                 PHONE_NUMBER AS PHONE_NUMBER,
+                 ADDRESS_LINE_1 AS ADDRESS_LINE_1,
+                 ADDRESS_LINE_2 AS ADDRESS_LINE_2,
+                 CITY AS CITY,
+                 STATE_PROVINCE_ID AS STATE_PROVINCE_ID,
+                 POSTAL_CODE AS POSTAL_CODE,
+                 SPATIAL_LOCATION AS SPATIAL_LOCATION
+                 FROM {{ ref('TARGET', 'STG_CUST_COMBINED_020') }}
+                	)
             dependencies:
               - locationName: TARGET
                 nodeName: STG_CUST_COMBINED_020
