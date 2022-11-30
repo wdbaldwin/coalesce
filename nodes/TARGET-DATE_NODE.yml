@@ -6,7 +6,7 @@ steps:
         daysToGenerate: "2000"
         postSQL: ""
         preSQL: ""
-        startingDate: DATEADD(DAY, -1200, CURRENT_DATE)
+        startingDate: DATEADD(DAY, {{parameters.lookback_days}}, CURRENT_DATE)
         truncateBefore: true
       database: ""
       dependencies: []
