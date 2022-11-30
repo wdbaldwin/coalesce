@@ -24,57 +24,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 12904
-              stepCounter: "651"
-            config: {}
-            dataType: STRING
-            description: ""
-            name: ACCOUNT_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"ACCOUNT_NUMBER\"::STRING"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12905
-              stepCounter: "651"
-            config: {}
-            dataType: NUMBER
-            description: ""
-            name: BILL_TO_ADDRESS_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"BILL_TO_ADDRESS_ID\"::NUMBER"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12906
-              stepCounter: "651"
-            config: {}
-            dataType: STRING
-            description: ""
-            name: CREDIT_CARD_APPROVAL_CODE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"CREDIT_CARD_APPROVAL_CODE\"::STRING"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 12907
               stepCounter: "651"
             config: {}
@@ -87,23 +36,6 @@ steps:
                   - columnCounter: 12322
                     stepCounter: "612"
                 transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"CREDIT_CARD_ID\"::NUMBER"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12908
-              stepCounter: "651"
-            config: {}
-            dataType: NUMBER
-            description: ""
-            name: CURRENCY_RATE_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"CURRENCY_RATE_ID\"::NUMBER"
           - acceptedValues:
               strictMatch: true
               values: []
@@ -143,40 +75,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 12911
-              stepCounter: "651"
-            config: {}
-            dataType: NUMBER
-            description: ""
-            name: FREIGHT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"FREIGHT\"::NUMBER"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12912
-              stepCounter: "651"
-            config: {}
-            dataType: STRING
-            description: ""
-            name: ONLINE_ORDER_FLAG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"ONLINE_ORDER_FLAG\"::STRING"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 12913
               stepCounter: "651"
             config: {}
@@ -189,23 +87,6 @@ steps:
                   - columnCounter: 12322
                     stepCounter: "612"
                 transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"ORDER_DATE\"::STRING"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12914
-              stepCounter: "651"
-            config: {}
-            dataType: NUMBER
-            description: ""
-            name: REVISION_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"REVISION_NUMBER\"::NUMBER"
           - acceptedValues:
               strictMatch: true
               values: []
@@ -228,23 +109,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 12916
-              stepCounter: "651"
-            config: {}
-            dataType: STRING
-            description: ""
-            name: SALES_ORDER_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"SALES_ORDER_NUMBER\"::STRING"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 12917
               stepCounter: "651"
             config: {}
@@ -257,40 +121,6 @@ steps:
                   - columnCounter: 12322
                     stepCounter: "612"
                 transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"SHIP_DATE\"::STRING"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12918
-              stepCounter: "651"
-            config: {}
-            dataType: NUMBER
-            description: ""
-            name: SHIP_METHOD_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"SHIP_METHOD_ID\"::NUMBER"
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 12919
-              stepCounter: "651"
-            config: {}
-            dataType: NUMBER
-            description: ""
-            name: SHIP_TO_ADDRESS_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12322
-                    stepCounter: "612"
-                transform: "\"SALES_ORDER_HEADER\".\"Contruct data\":\"territorydata\".\"SHIP_TO_ADDRESS_ID\"::NUMBER"
           - acceptedValues:
               strictMatch: true
               values: []

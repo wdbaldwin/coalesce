@@ -99,13 +99,14 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: PHONE_NUMBER
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 13320
                     stepCounter: "667"
-                transform: ""
+                transform: IFF("STG_CUST_COMBINED_020"."PHONE_NUMBER" = '697-555-0142','777-777-7777',"STG_CUST_COMBINED_020"."PHONE_NUMBER")
           - columnReference:
               columnCounter: 13346
               stepCounter: "669"

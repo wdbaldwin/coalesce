@@ -1,5 +1,5 @@
 steps:
-  STG_SALES_DETAIL_HEADER_030-657:
+  STG_SALES_DETAIL_HEADER_030-741:
     operation:
       config:
         insertStrategy: INSERT
@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 13101
-              stepCounter: "657"
+              columnCounter: 14399
+              stepCounter: "741"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -34,8 +34,8 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13102
-              stepCounter: "657"
+              columnCounter: 14400
+              stepCounter: "741"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -48,22 +48,8 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13103
-              stepCounter: "657"
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CARRIER_TRACKING_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12346
-                    stepCounter: "614"
-                transform: ""
-          - columnReference:
-              columnCounter: 13104
-              stepCounter: "657"
+              columnCounter: 14402
+              stepCounter: "741"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -76,8 +62,8 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13105
-              stepCounter: "657"
+              columnCounter: 14403
+              stepCounter: "741"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -90,22 +76,8 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13106
-              stepCounter: "657"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SPECIAL_OFFER_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12349
-                    stepCounter: "614"
-                transform: ""
-          - columnReference:
-              columnCounter: 13107
-              stepCounter: "657"
+              columnCounter: 14405
+              stepCounter: "741"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -118,8 +90,8 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13108
-              stepCounter: "657"
+              columnCounter: 14406
+              stepCounter: "741"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -132,246 +104,8 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13109
-              stepCounter: "657"
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: MODIFIED_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12352
-                    stepCounter: "614"
-                transform: ""
-          - columnReference:
-              columnCounter: 13111
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: ACCOUNT_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13078
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13112
-              stepCounter: "657"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: BILL_TO_ADDRESS_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13079
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13113
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CREDIT_CARD_APPROVAL_CODE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13080
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13116
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CREDIT_CARD_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13100
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13117
-              stepCounter: "657"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CURRENCY_RATE_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13082
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13118
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CUSTOMER_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13083
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13119
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: DUE_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13084
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13120
-              stepCounter: "657"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: FREIGHT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13085
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13121
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: ONLINE_ORDER_FLAG
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13086
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13122
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: ORDER_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13087
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13123
-              stepCounter: "657"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: REVISION_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13088
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13125
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SALES_ORDER_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13090
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13126
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SHIP_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13091
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13127
-              stepCounter: "657"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SHIP_METHOD_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13092
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13128
-              stepCounter: "657"
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SHIP_TO_ADDRESS_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13093
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13129
-              stepCounter: "657"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: STATUS
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 13094
-                    stepCounter: "656"
-                transform: ""
-          - columnReference:
-              columnCounter: 13110
-              stepCounter: "657"
+              columnCounter: 14408
+              stepCounter: "741"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -384,8 +118,92 @@ steps:
                     stepCounter: "614"
                 transform: ""
           - columnReference:
-              columnCounter: 13130
-              stepCounter: "657"
+              columnCounter: 14410
+              stepCounter: "741"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREDIT_CARD_ID_HASHED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13857
+                    stepCounter: "656"
+                transform: ""
+          - columnReference:
+              columnCounter: 14411
+              stepCounter: "741"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13083
+                    stepCounter: "656"
+                transform: ""
+          - columnReference:
+              columnCounter: 14412
+              stepCounter: "741"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13084
+                    stepCounter: "656"
+                transform: ""
+          - columnReference:
+              columnCounter: 14413
+              stepCounter: "741"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13087
+                    stepCounter: "656"
+                transform: ""
+          - columnReference:
+              columnCounter: 14415
+              stepCounter: "741"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13091
+                    stepCounter: "656"
+                transform: ""
+          - columnReference:
+              columnCounter: 14416
+              stepCounter: "741"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13094
+                    stepCounter: "656"
+                transform: ""
+          - columnReference:
+              columnCounter: 14417
+              stepCounter: "741"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -398,8 +216,8 @@ steps:
                     stepCounter: "656"
                 transform: IFF(("ORDER_LINE_ITEM"=1),"SUB_TOTAL",0)
           - columnReference:
-              columnCounter: 13131
-              stepCounter: "657"
+              columnCounter: 14418
+              stepCounter: "741"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -412,8 +230,8 @@ steps:
                     stepCounter: "656"
                 transform: IFF(("ORDER_LINE_ITEM"=1),"TAX_AMT",0)
           - columnReference:
-              columnCounter: 13132
-              stepCounter: "657"
+              columnCounter: 14419
+              stepCounter: "741"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -426,8 +244,8 @@ steps:
                     stepCounter: "656"
                 transform: IFF(("ORDER_LINE_ITEM"=1),"TOTAL_DUE",0)
           - columnReference:
-              columnCounter: 13133
-              stepCounter: "657"
+              columnCounter: 14420
+              stepCounter: "741"
             dataType: NUMBER
             description: ""
             hashColumns: []
@@ -464,4 +282,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "657"
+    stepCounter: "741"

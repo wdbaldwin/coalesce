@@ -9,12 +9,18 @@ locations:
       "3":
         database: COALESCE_TRAINING
         schema: COALESCE_PROD
+      "4":
+        database: COALESCE_TRAINING
+        schema: COALESCE_PROD
   SOURCE:
     mappingDefinitions:
       "2":
         database: COALESCE_TRAINING
         schema: COALESCE_SOURCE
       "3":
+        database: COALESCE_TRAINING
+        schema: COALESCE_SOURCE
+      "4":
         database: COALESCE_TRAINING
         schema: COALESCE_SOURCE
   TARGET:
@@ -25,6 +31,9 @@ locations:
       "3":
         database: COALESCE_TRAINING
         schema: COALESCE_PROD
+      "4":
+        database: COALESCE_TRAINING
+        schema: COALESCE_TARGET
 macros: {}
 packages: {}
 projects: {}
@@ -2186,25 +2195,6 @@ subgraphs:
       - "667"
       - "669"
       - "670"
-  Subgraph-28:
-    id: 28
-    name: PRODUCT
-    steps:
-      - 580
-      - 581
-      - 582
-      - 586
-      - 587
-      - 588
-      - 599
-      - 600
-      - 601
-      - "602"
-      - "603"
-      - "604"
-      - "605"
-      - "607"
-      - "608"
   Subgraph-29:
     id: 29
     name: SALES
@@ -2217,7 +2207,7 @@ subgraphs:
       - "614"
       - "651"
       - "656"
-      - "657"
+      - "741"
   Subgraph-30:
     id: 30
     name: DATE
@@ -2227,4 +2217,20 @@ subgraphs:
       - "646"
       - "647"
       - "648"
+  Subgraph-32:
+    id: 32
+    name: PRODUCT
+    steps:
+      - 723
+      - 724
+      - 725
+      - 731
+      - 732
+      - 733
+      - "734"
+      - "735"
+      - "736"
+      - "737"
+      - "738"
+      - "739"
 version: 1

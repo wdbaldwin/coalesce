@@ -1,12 +1,10 @@
 steps:
-  RV_PRODUCT-739:
+  FCT_SALES-743:
     operation:
       config:
-        insertStrategy: INSERT
         postSQL: ""
         preSQL: ""
         testsEnabled: true
-        truncateBefore: true
       database: ""
       dependencies: []
       deployEnabled: true
@@ -15,13 +13,55 @@ steps:
       isMultisource: false
       locationID: ""
       locationName: TARGET
-      materializationType: view
+      materializationType: table
       metadata:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 14364
-              stepCounter: "739"
+              columnCounter: 14443
+              stepCounter: "743"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_CUST_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14438
+                    stepCounter: "742"
+                transform: ""
+          - columnReference:
+              columnCounter: 14444
+              stepCounter: "743"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14429
+                    stepCounter: "742"
+                transform: ""
+          - columnReference:
+              columnCounter: 14445
+              stepCounter: "743"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_PRODUCT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14439
+                    stepCounter: "742"
+                transform: ""
+          - columnReference:
+              columnCounter: 14446
+              stepCounter: "743"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -30,317 +70,299 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14290
-                    stepCounter: "737"
+                  - columnCounter: 14424
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14365
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14447
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_NAME
+            name: DIM_TERRITORY_KEY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14291
-                    stepCounter: "737"
+                  - columnCounter: 14440
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14366
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14448
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_NUMBER
+            name: TERRITORY_ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14292
-                    stepCounter: "737"
+                  - columnCounter: 14437
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14367
-              stepCounter: "739"
-            dataType: BOOLEAN
+              columnCounter: 14449
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: MAKE_FLAG
+            name: DIM_ORDER_DATE_KEY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14293
-                    stepCounter: "737"
+                  - columnCounter: 14441
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14368
-              stepCounter: "739"
-            dataType: BOOLEAN
+              columnCounter: 14450
+              stepCounter: "743"
+            dataType: DATE
             description: ""
             hashColumns: []
             hashDetails: null
-            name: FINISHED_GOODS_FLAG
+            name: ORDER_DATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14294
-                    stepCounter: "737"
+                  - columnCounter: 14431
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14369
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14451
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: COLOR
+            name: DIM_SHIP_DATE_KEY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14295
-                    stepCounter: "737"
+                  - columnCounter: 14442
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14370
-              stepCounter: "739"
+              columnCounter: 14452
+              stepCounter: "743"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14432
+                    stepCounter: "742"
+                transform: ""
+          - columnReference:
+              columnCounter: 14453
+              stepCounter: "743"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SAFETY_STOCK_LEVEL
+            isBusinessKey: true
+            name: SALES_ORDER_ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14296
-                    stepCounter: "737"
+                  - columnCounter: 14421
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14371
-              stepCounter: "739"
+              columnCounter: 14454
+              stepCounter: "743"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: REORDER_POINT
+            isBusinessKey: true
+            name: SALES_ORDER_DETAIL_ID
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14297
-                    stepCounter: "737"
+                  - columnCounter: 14422
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14372
-              stepCounter: "739"
+              columnCounter: 14455
+              stepCounter: "743"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: STANDARD_COST
+            name: ORDER_QTY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14298
-                    stepCounter: "737"
+                  - columnCounter: 14423
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14373
-              stepCounter: "739"
+              columnCounter: 14456
+              stepCounter: "743"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: LIST_PRICE
+            name: UNIT_PRICE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14299
-                    stepCounter: "737"
+                  - columnCounter: 14425
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14374
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SIZE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 14300
-                    stepCounter: "737"
-                transform: ""
-          - columnReference:
-              columnCounter: 14375
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SIZE_UNIT_MEASURE_CODE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 14301
-                    stepCounter: "737"
-                transform: ""
-          - columnReference:
-              columnCounter: 14376
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: WEIGHT_UNIT_MEASURE_CODE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 14302
-                    stepCounter: "737"
-                transform: ""
-          - columnReference:
-              columnCounter: 14377
-              stepCounter: "739"
+              columnCounter: 14457
+              stepCounter: "743"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: DAYS_TO_MANUFACTURE
+            name: LINE_TOTAL
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14303
-                    stepCounter: "737"
+                  - columnCounter: 14426
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14378
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14458
+              stepCounter: "743"
+            dataType: STRING
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_LINE
+            name: CREDIT_CARD_ID_HASHED
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14304
-                    stepCounter: "737"
+                  - columnCounter: 14428
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14379
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14459
+              stepCounter: "743"
+            dataType: DATE
             description: ""
             hashColumns: []
             hashDetails: null
-            name: CLASS
+            name: DUE_DATE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14305
-                    stepCounter: "737"
+                  - columnCounter: 14430
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14380
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14460
+              stepCounter: "743"
+            dataType: STRING
             description: ""
             hashColumns: []
             hashDetails: null
-            name: STYLE
+            name: STATUS
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14306
-                    stepCounter: "737"
+                  - columnCounter: 14433
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14381
-              stepCounter: "739"
-            dataType: NUMBER(38,0)
+              columnCounter: 14461
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_MODEL_ID
+            name: ORDER_LINE_ITEM
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14308
-                    stepCounter: "737"
+                  - columnCounter: 14427
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14382
-              stepCounter: "739"
-            dataType: NUMBER(38,0)
+              columnCounter: 14462
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_SUBCATEGORY_ID
+            name: SUB_TOTAL
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14309
-                    stepCounter: "737"
+                  - columnCounter: 14434
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14383
-              stepCounter: "739"
-            dataType: VARCHAR(8192) COLLATE 'en_us'
+              columnCounter: 14463
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_SUBCATEGORY_NAME
+            name: TAX_AMT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14311
-                    stepCounter: "737"
+                  - columnCounter: 14435
+                    stepCounter: "742"
                 transform: ""
           - columnReference:
-              columnCounter: 14384
-              stepCounter: "739"
-            dataType: NUMBER(38,0)
+              columnCounter: 14464
+              stepCounter: "743"
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
-            name: PRODUCT_CATEGORY_ID
+            name: TOTAL_DUE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 14312
-                    stepCounter: "737"
+                  - columnCounter: 14436
+                    stepCounter: "742"
                 transform: ""
-          - columnReference:
-              columnCounter: 14385
-              stepCounter: "739"
-            dataType: VARCHAR(16777216)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14465
+              stepCounter: "743"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
             description: ""
             hashColumns: []
-            hashDetails: null
-            name: PRODUCT_CATEGORY_NAME
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
             nullable: true
             sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 14313
-                    stepCounter: "737"
-                transform: ""
-          - columnReference:
-              columnCounter: 14386
-              stepCounter: "739"
-            dataType: NUMBER(38,0)
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14466
+              stepCounter: "743"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
             description: ""
             hashColumns: []
-            hashDetails: null
-            name: WEIGHT
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
             nullable: true
             sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 14347
-                    stepCounter: "737"
-                transform: ""
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -348,14 +370,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: TARGET
-                nodeName: STG_PRODUCT
+                nodeName: STG_SALES_FCT
             join:
-              joinCondition: FROM {{ ref('TARGET', 'STG_PRODUCT') }} "STG_PRODUCT"
-            name: RV_PRODUCT
+              joinCondition: FROM {{ ref('TARGET', 'STG_SALES_FCT') }} "STG_SALES_FCT"
+            name: FCT_SALES
             noLinkRefs: []
-      name: RV_PRODUCT
+      name: FCT_SALES
       overrideSQL: false
       schema: ""
-      sqlType: Stage
+      sqlType: Fact
       type: sql
-    stepCounter: "739"
+    stepCounter: "743"

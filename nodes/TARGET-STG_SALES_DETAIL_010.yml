@@ -48,20 +48,6 @@ steps:
                     stepCounter: "611"
                 transform: ""
           - columnReference:
-              columnCounter: 12346
-              stepCounter: "614"
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CARRIER_TRACKING_NUMBER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12315
-                    stepCounter: "611"
-                transform: ""
-          - columnReference:
               columnCounter: 12347
               stepCounter: "614"
             dataType: NUMBER(38,0)
@@ -90,20 +76,6 @@ steps:
                     stepCounter: "611"
                 transform: ""
           - columnReference:
-              columnCounter: 12349
-              stepCounter: "614"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: SPECIAL_OFFER_ID
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12318
-                    stepCounter: "611"
-                transform: ""
-          - columnReference:
               columnCounter: 12350
               stepCounter: "614"
             dataType: NUMBER(38,0)
@@ -129,20 +101,6 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 12320
-                    stepCounter: "611"
-                transform: ""
-          - columnReference:
-              columnCounter: 12352
-              stepCounter: "614"
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: MODIFIED_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 12321
                     stepCounter: "611"
                 transform: ""
           - acceptedValues:

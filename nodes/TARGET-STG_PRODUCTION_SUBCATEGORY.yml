@@ -1,5 +1,5 @@
 steps:
-  STG_PRODUCTION_SUBCATEGORY-604:
+  STG_PRODUCTION_SUBCATEGORY-736:
     operation:
       config:
         insertStrategy: INSERT
@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 12147
-              stepCounter: "604"
+              columnCounter: 14287
+              stepCounter: "736"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -30,12 +30,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12122
-                    stepCounter: "601"
+                  - columnCounter: 14262
+                    stepCounter: "733"
                 transform: ""
           - columnReference:
-              columnCounter: 12148
-              stepCounter: "604"
+              columnCounter: 14288
+              stepCounter: "736"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -44,12 +44,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12123
-                    stepCounter: "601"
+                  - columnCounter: 14263
+                    stepCounter: "733"
                 transform: ""
           - columnReference:
-              columnCounter: 12149
-              stepCounter: "604"
+              columnCounter: 14289
+              stepCounter: "736"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -58,8 +58,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12124
-                    stepCounter: "601"
+                  - columnCounter: 14264
+                    stepCounter: "733"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -78,4 +78,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "604"
+    stepCounter: "736"

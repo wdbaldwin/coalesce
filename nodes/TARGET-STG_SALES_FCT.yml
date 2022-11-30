@@ -1,0 +1,413 @@
+steps:
+  STG_SALES_FCT-742:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14438
+              stepCounter: "742"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isSurrogateKey: true
+            keyColumnType: None
+            name: DIM_CUST_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13340
+                    stepCounter: "669"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: 14429
+              stepCounter: "742"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14411
+                    stepCounter: "741"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14439
+              stepCounter: "742"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isSurrogateKey: true
+            keyColumnType: None
+            name: DIM_PRODUCT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14315
+                    stepCounter: "738"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: 14424
+              stepCounter: "742"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14403
+                    stepCounter: "741"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14440
+              stepCounter: "742"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isSurrogateKey: true
+            keyColumnType: None
+            name: DIM_TERRITORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 13601
+                    stepCounter: "689"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: 14437
+              stepCounter: "742"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TERRITORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14420
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14441
+              stepCounter: "742"
+            config: {}
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            keyColumnType: None
+            name: DIM_ORDER_DATE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12813
+                    stepCounter: "648"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: 14431
+              stepCounter: "742"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14413
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14442
+              stepCounter: "742"
+            config: {}
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            keyColumnType: None
+            name: DIM_SHIP_DATE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12794
+                    stepCounter: "647"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: 14432
+              stepCounter: "742"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14415
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14421
+              stepCounter: "742"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SALES_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14399
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14422
+              stepCounter: "742"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SALES_ORDER_DETAIL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14400
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14423
+              stepCounter: "742"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_QTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14402
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14425
+              stepCounter: "742"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UNIT_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14405
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14426
+              stepCounter: "742"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LINE_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14406
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14428
+              stepCounter: "742"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREDIT_CARD_ID_HASHED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14410
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14430
+              stepCounter: "742"
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14412
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14433
+              stepCounter: "742"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14416
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14427
+              stepCounter: "742"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_LINE_ITEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14408
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14434
+              stepCounter: "742"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUB_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14417
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14435
+              stepCounter: "742"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TAX_AMT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14418
+                    stepCounter: "741"
+                transform: ""
+          - columnReference:
+              columnCounter: 14436
+              stepCounter: "742"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTAL_DUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14419
+                    stepCounter: "741"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DIM_CUST: "669"
+              DIM_ORDER_DATE: "648"
+              DIM_PRODUCT: "738"
+              DIM_SHIP_DATE: "647"
+              DIM_TERRITORY: "689"
+              STG_SALES_DETAIL_HEADER_030: "741"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DIM_SHIP_DATE
+              - locationName: TARGET
+                nodeName: DIM_ORDER_DATE
+              - locationName: TARGET
+                nodeName: DIM_CUST
+              - locationName: TARGET
+                nodeName: DIM_TERRITORY
+              - locationName: TARGET
+                nodeName: DIM_PRODUCT
+              - locationName: TARGET
+                nodeName: STG_SALES_DETAIL_HEADER_030
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'STG_SALES_DETAIL_HEADER_030') }} "STG_SALES_DETAIL_HEADER_030"
+                LEFT JOIN {{ ref('TARGET', 'DIM_CUST') }} "DIM_CUST"
+                ON "STG_SALES_DETAIL_HEADER_030"."CUSTOMER_ID" = "DIM_CUST"."CUSTOMER_ID"
+                LEFT JOIN {{ ref('TARGET', 'DIM_PRODUCT') }} "DIM_PRODUCT"
+                ON "STG_SALES_DETAIL_HEADER_030"."PRODUCT_ID" = "DIM_PRODUCT"."PRODUCT_ID"
+                LEFT JOIN  {{ ref('TARGET', 'DIM_TERRITORY') }} "DIM_TERRITORY"
+                ON "STG_SALES_DETAIL_HEADER_030"."TERRITORY_ID" = "DIM_TERRITORY"."TERRITORY_ID"
+                INNER JOIN {{ ref('TARGET', 'DIM_SHIP_DATE') }} "DIM_SHIP_DATE"
+                ON "STG_SALES_DETAIL_HEADER_030"."SHIP_DATE"= "DIM_SHIP_DATE"."SHIP_CALENDAR_DATE"
+                INNER JOIN {{ ref('TARGET', 'DIM_ORDER_DATE') }} "DIM_ORDER_DATE"
+                ON "STG_SALES_DETAIL_HEADER_030"."ORDER_DATE" = "DIM_ORDER_DATE"."ORDER_CALENDAR_DATE"
+            name: STG_SALES_FCT
+            noLinkRefs: []
+      name: STG_SALES_FCT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "742"

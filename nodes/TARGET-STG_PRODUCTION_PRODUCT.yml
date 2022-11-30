@@ -1,5 +1,5 @@
 steps:
-  STG_PRODUCTION_PRODUCT-603:
+  STG_PRODUCTION_PRODUCT-735:
     operation:
       config:
         insertStrategy: INSERT
@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 12128
-              stepCounter: "603"
+              columnCounter: 14268
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -30,12 +30,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12103
-                    stepCounter: "600"
+                  - columnCounter: 14243
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12129
-              stepCounter: "603"
+              columnCounter: 14269
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -44,12 +44,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12104
-                    stepCounter: "600"
+                  - columnCounter: 14244
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12130
-              stepCounter: "603"
+              columnCounter: 14270
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -58,12 +58,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12105
-                    stepCounter: "600"
+                  - columnCounter: 14245
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12131
-              stepCounter: "603"
+              columnCounter: 14271
+              stepCounter: "735"
             dataType: BOOLEAN
             description: ""
             hashColumns: []
@@ -72,12 +72,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12106
-                    stepCounter: "600"
+                  - columnCounter: 14246
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12132
-              stepCounter: "603"
+              columnCounter: 14272
+              stepCounter: "735"
             dataType: BOOLEAN
             description: ""
             hashColumns: []
@@ -86,12 +86,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12107
-                    stepCounter: "600"
+                  - columnCounter: 14247
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12133
-              stepCounter: "603"
+              columnCounter: 14273
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -100,12 +100,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12108
-                    stepCounter: "600"
+                  - columnCounter: 14248
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12134
-              stepCounter: "603"
+              columnCounter: 14274
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -114,12 +114,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12109
-                    stepCounter: "600"
+                  - columnCounter: 14249
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12135
-              stepCounter: "603"
+              columnCounter: 14275
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -128,12 +128,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12110
-                    stepCounter: "600"
+                  - columnCounter: 14250
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12136
-              stepCounter: "603"
+              columnCounter: 14276
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -142,12 +142,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12111
-                    stepCounter: "600"
+                  - columnCounter: 14251
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12137
-              stepCounter: "603"
+              columnCounter: 14277
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -156,12 +156,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12112
-                    stepCounter: "600"
+                  - columnCounter: 14252
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12138
-              stepCounter: "603"
+              columnCounter: 14278
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -170,12 +170,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12113
-                    stepCounter: "600"
+                  - columnCounter: 14253
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12139
-              stepCounter: "603"
+              columnCounter: 14279
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -184,12 +184,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12114
-                    stepCounter: "600"
+                  - columnCounter: 14254
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12140
-              stepCounter: "603"
+              columnCounter: 14280
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -198,12 +198,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12115
-                    stepCounter: "600"
+                  - columnCounter: 14255
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12141
-              stepCounter: "603"
+              columnCounter: 14281
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -212,12 +212,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12116
-                    stepCounter: "600"
+                  - columnCounter: 14256
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12142
-              stepCounter: "603"
+              columnCounter: 14282
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -226,12 +226,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12117
-                    stepCounter: "600"
+                  - columnCounter: 14257
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12143
-              stepCounter: "603"
+              columnCounter: 14283
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -240,12 +240,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12118
-                    stepCounter: "600"
+                  - columnCounter: 14258
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12144
-              stepCounter: "603"
+              columnCounter: 14284
+              stepCounter: "735"
             dataType: VARCHAR(8192) COLLATE 'en_us'
             description: ""
             hashColumns: []
@@ -254,12 +254,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12119
-                    stepCounter: "600"
+                  - columnCounter: 14259
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12145
-              stepCounter: "603"
+              columnCounter: 14285
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -268,12 +268,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12120
-                    stepCounter: "600"
+                  - columnCounter: 14260
+                    stepCounter: "732"
                 transform: ""
           - columnReference:
-              columnCounter: 12146
-              stepCounter: "603"
+              columnCounter: 14286
+              stepCounter: "735"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -282,15 +282,29 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 12121
-                    stepCounter: "600"
+                  - columnCounter: 14261
+                    stepCounter: "732"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14346
+              stepCounter: "735"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14345
+                    stepCounter: "732"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases:
-              PRODUCTION_PRODUCT: "600"
-            customSQL:
+          - customSQL:
               customSQL: ""
             dependencies:
               - locationName: SOURCE
@@ -304,4 +318,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "603"
+    stepCounter: "735"
